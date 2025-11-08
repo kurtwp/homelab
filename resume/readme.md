@@ -1,7 +1,6 @@
 # Kurt W. Pasewaldt
 
 <!-- Cell: (704) 737-4236 | Email: kurt@pasewaldt.com -->
----
 
 ## 💻 VoIP & Data Networking Specialist
 
