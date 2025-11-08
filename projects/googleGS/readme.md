@@ -17,6 +17,6 @@ In this project, you will find the code I used to create the DB, plus videos goi
 
 ---
 
-<a href="https://github.com/kurtwp/homelab/blob/main/projects/googleGS/code.gs)" target="_blank">code.gs</a> Main code for the simulated DB. <br>
+<a href="https://github.com/kurtwp/homelab/blob/main/projects/googleGS/code.gs" target="_blank">code.gs</a> Main code for the simulated DB. <br>
 <a href="https://github.com/kurtwp/homelab/blob/main/projects/googleGS/functions.gs" target="_blank">functions.gs</a> Functions called from code.gs. <br>
 <a href="https://github.com/kurtwp/homelab/blob/main/projects/googleGS/menu.gs" target="_blank">menu.gs</a> Code used to create a custom menu. <br>
