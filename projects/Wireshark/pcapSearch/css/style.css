@@ -1,0 +1,5 @@
+.larger-text {
+  font-size: 1.5rem; /* Makes the text bigger */
+  font-weight: normal; /* Ensures it's not bold */
+  color: #333; /* Optional: Sets a dark gray text color */
+}
