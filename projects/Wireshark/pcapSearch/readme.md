@@ -1,9 +1,8 @@
 # Searching though PCAP.
 
-## If you have a few .pcap files that you generated while troubleshooting and need to look for a certain DID 
-you can create a script that uses tshark to sarch it file.  
-
-### The first example sis using a bash script:
+### If you have a few .pcap files that you generated while troubleshooting and need to look for a certain DID you can create a script that uses tshark to sarch it file.  
+---
+#### The first example sis using a bash script:
 ```bash
 #!/bin/bash
 
