@@ -48,3 +48,9 @@ The second example uses a Python script:
 	print(f"{i} File Searched!")
 	print("Calls can be found in file: " + outPut)
 ```
+---
+The above examples demonstrate searching for DIDs in PCAP files using tshark (which requires installation on your system) via Bash and Python. As an alternative, users without tshark can achieve similar results by combining ***tcpdump*** with ***grep***. 
+```bash
+ tcpdump -r <file> -A 'udp port 5060' | grep -i '<phoneNumber>'
+```
+See if you can incorporate the tcpdump command into the scripts above.
