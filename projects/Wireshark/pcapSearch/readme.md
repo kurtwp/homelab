@@ -19,3 +19,8 @@ do
 done
 echo "Search has completed see file $outfile !"
 ```
+
+<p style="font-size: 1.5em; font-weight: normal;">
+  This paragraph is an attempt to use inline styles for a larger, non-bold font.
+  **Be aware that this style will likely be ignored by GitHub and other platforms.**
+</p>
