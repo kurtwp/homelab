@@ -5,7 +5,7 @@ When planning my home Kubernetes cluster, I wanted something affordable, power e
 
 Why this setup?
 
-- **Performance**: The Intel N150 isn’t a beast, but it’s plenty for a lightweight Kurernets running in a home lab.
+- **Performance**: The Intel N150 isn’t a beast, but it’s plenty for a lightweight Kubernetes running in a home lab.
 - **Memory**: 16GB per node gives me room to run multiple pods without hitting resource limits too quickly.
 - **Storage**: With 512GB SSDs, I have fast SSD storage for container images, and logs.
 - **Power**: These mini PCs sip power compared to full desktops or servers. The Kamrui mini PCs are great for running Kubernets node 24/7.
