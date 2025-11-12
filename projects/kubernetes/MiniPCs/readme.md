@@ -12,7 +12,7 @@ Why this setup?
 - **Cost**: At the time of this article the mini PCs cost $149 each on the Kamrui website, with free shipping and additonal $15 off.    
 
 ---
-If you're looking to optimize your setup even further, use higher-spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. These machines handle tasks more efficiently and provide better performance.
+If you're looking to stay with INTEL CPUs you can optimize your setup even further, using higher spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. These machines handle tasks more efficiently and provide better performance.
 
 For worker nodes, you can save a bit by going with Intel N95 mini PCs that come with 8GB RAM and, ideally, a 512GB SSD. While they’re slightly less powerful, they’re more than capable of running container workloads and the cost savings can add up if you're scaling your cluster.
 
