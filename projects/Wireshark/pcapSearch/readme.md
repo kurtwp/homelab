@@ -20,7 +20,7 @@ The first example uses a bash script:
 	echo "Search has completed see file $outfile !"
 ```
 The second example uses a Python script:
-```bash
+```python
 	import os
 	import subprocess
 	
@@ -49,8 +49,12 @@ The second example uses a Python script:
 	print("Calls can be found in file: " + outPut)
 ```
 ---
-The above examples demonstrate searching for DIDs in PCAP files using tshark (which requires installation on your system) via Bash and Python. As an alternative, users without tshark can achieve similar results by combining ***tcpdump*** with ***grep***. 
-```bash
- tcpdump -r <file> -A 'udp port 5060' | grep -i '<phoneNumber>'
+The above examples demonstrate searching for DIDs in PCAP files using tshark (which requires installation on your system) via Bash and Python. As an alternative, users without tshark can achieve similar results by combining **tcpdump** with **grep**. 
+
+``` 
+tcpdump -r <file> -A 'udp port 5060' | grep -i '<phoneNumber>
 ```
+---
 See if you can incorporate the tcpdump command into the scripts above.
+
+**NOTE**: The tshark command uses **CONTAINs**, which acts like a wildcard search. When running either this Python script or the bash script, the **CONTAINs** parameter will allow the command to search across most SIP fields. Not just DIDs.  
