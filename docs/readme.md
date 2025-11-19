@@ -75,15 +75,15 @@ Materials covering layer 2 concepts, including **STP**, **VLANs**, **Trunks**, a
 
 | File Name | Link |
 | :--- | :--- |
-| I802.1Q, VTP, VLANs, and STP Lab - MW.pdf | [Link](04_Switching_&_VLANs/I802.1Q,%20VTP,%20VLANs,%20and%20STP%20Lab%20-%20MW.pdf) |
-| STP PDF .pdf | [Link](04_Switching_&_VLANs/STP%20PDF%20.pdf) |
-| SWITCHING CISCO.pdf | [Link](04_Switching_&_VLANs/SWITCHING%20CISCO.pdf) |
-| Understanding VLANs.pdf | [Link](04_Switching_&_VLANs/Understanding%20VLANs.pdf) |
-| Vlan guide.pdf | [Link](04_Switching_&_VLANs/Vlan%20guide.pdf) |
-| VLAN_Security_Audit_Checklist.xlsx | [Link](04_Switching_&_VLANs/%C2%A0VLAN_Security_Audit_Checklist.xlsx) |
-| VLANs & TRUNKS.pdf | [Link](04_Switching_&_VLANs/VLANs%20&%20TRUNKS.pdf) |
-| Vlan & Trunking.pdf | [Link](04_Switching_&_VLANs/Vlan%20&%20Trunking.pdf) |
-| Cisco switches_Notes.pdf | [Link](04_Switching_&_VLANs/Cisco%20switches_Notes.pdf) |
+| I802.1Q, VTP, VLANs, and STP Lab - MW.pdf | [Link](switchVLANS/I802.1Q,%20VTP,%20VLANs,%20and%20STP%20Lab%20-%20MW.pdf) |
+| STP PDF .pdf | [Link](switchVLANS/STP%20PDF%20.pdf) |
+| SWITCHING CISCO.pdf | [Link](switchVLANS/SWITCHING%20CISCO.pdf) |
+| Understanding VLANs.pdf | [Link](switchVLANS/Understanding%20VLANs.pdf) |
+| Vlan guide.pdf | [Link](switchVLANS/Vlan%20guide.pdf) |
+| VLAN_Security_Audit_Checklist.xlsx | [Link](switchVLANS/%C2%A0VLAN_Security_Audit_Checklist.xlsx) |
+| VLANs & TRUNKS.pdf | [Link](switchVLANS/VLANs%20&%20TRUNKS.pdf) |
+| Vlan & Trunking.pdf | [Link](switchVLANS/Vlan%20&%20Trunking.pdf) |
+| Cisco switches_Notes.pdf | [Link](switchVLANS/Cisco%20switches_Notes.pdf) |
 
 ---
 
