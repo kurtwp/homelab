@@ -2,7 +2,7 @@
 
 ### Interview & Career Prep
 
-Resources focused on job readiness, interview questions, and career roadmaps.
+Resources focused on job readiness, interview questions, and career road maps.
 
 | File Name | Link |
 | :--- | :--- |
@@ -20,33 +20,33 @@ Resources focused on job readiness, interview questions, and career roadmaps.
 
 ---
 
-### 2. 💻 General Networking & Basics
+### General Networking & Basics
 
 Foundational concepts, general notes, and essential guides for all levels.
 
 | File Name | Link |
 | :--- | :--- |
-| Basic of Networking .pdf | [Link](02_General_Networking_&_Basics/Basic%20of%20Networking%20.pdf) |
-| Basic.pdf | [Link](02_General_Networking_&_Basics/Basic.pdf) |
-| Computer Networks Notes 📝.pdf | [Link](02_General_Networking_&_Basics/Computer%20Networks%20Notes%20%F0%9F%93%9D.pdf) |
-| Essential networking concepts.pdf | [Link](02_General_Networking_&_Basics/Essential%20networking%20concepts.pdf) |
-| Networking Basic to Advance .pdf | [Link](02_General_Networking_&_Basics/Networking%20Basic%20to%20Advance%20.pdf) |
-| Networking guide you should know! .pdf | [Link](02_General_Networking_&_Basics/Networking%20guide%20you%20should%20know!%20.pdf) |
-| Networking .pdf | [Link](02_General_Networking_&_Basics/Networking%20.pdf) |
-| Network Engineering Book.pdf | [Link](02_General_Networking_&_Basics/Network%20Engineering%20Book.pdf) |
-| Some basic and Most Important Networking Protocols.pdf | [Link](02_General_Networking_&_Basics/Some%20basic%20and%20Most%20Important%20Networking%20Protocols.pdf) |
-| C00V01+-+Network+Terminology.pptx | [Link](02_General_Networking_&_Basics/C00V01+-+Network+Terminology.pptx) |
-| C00V02+-+Network+Components.pptx | [Link](02_General_Networking_&_Basics/C00V02+-+Network+Components.pptx) |
-| Doc.pdf | [Link](02_General_Networking_&_Basics/Doc.pdf) |
-| Net.pdf | [Link](02_General_Networking_&_Basics/Net.pdf) |
-| Networking for DevOps .pdf | [Link](02_General_Networking_&_Basics/Networking%20for%20DevOps%20.pdf) |
-| Networking for DevOps -1.pdf | [Link](02_General_Networking_&_Basics/Networking%20for%20DevOps%20-1.pdf) |
-| Network Management Lab.pdf | [Link](02_General_Networking_&_Basics/Network%20Management%20Lab.pdf) |
-| CCNA NETWORK ENGINEER.pdf | [Link](02_General_Networking_&_Basics/CCNA%20NETWORK%20ENGINEER.pdf) |
+| Basic of Networking .pdf | [Link](basicNetworking/Basic%20of%20Networking%20.pdf) |
+| Basic.pdf | [Link](basicNetworking/Basic.pdf) |
+| Computer Networks Notes 📝.pdf | [Link](basicNetworking/Computer%20Networks%20Notes%20%F0%9F%93%9D.pdf) |
+| Essential networking concepts.pdf | [Link](basicNetworking/Essential%20networking%20concepts.pdf) |
+| Networking Basic to Advance .pdf | [Link](basicNetworking/Networking%20Basic%20to%20Advance%20.pdf) |
+| Networking guide you should know! .pdf | [Link](basicNetworking/Networking%20guide%20you%20should%20know!%20.pdf) |
+| Networking .pdf | [Link](basicNetworking/Networking%20.pdf) |
+| Network Engineering Book.pdf | [Link](basicNetworking/Network%20Engineering%20Book.pdf) |
+| Some basic and Most Important Networking Protocols.pdf | [Link](basicNetworking/Some%20basic%20and%20Most%20Important%20Networking%20Protocols.pdf) |
+| C00V01+-+Network+Terminology.pptx | [Link](basicNetworking/C00V01+-+Network+Terminology.pptx) |
+| C00V02+-+Network+Components.pptx | [Link](basicNetworking/C00V02+-+Network+Components.pptx) |
+| Doc.pdf | [Link](basicNetworking/Doc.pdf) |
+| Net.pdf | [Link](basicNetworking/Net.pdf) |
+| Networking for DevOps .pdf | [Link](basicNetworking/Networking%20for%20DevOps%20.pdf) |
+| Networking for DevOps -1.pdf | [Link](basicNetworking/Networking%20for%20DevOps%20-1.pdf) |
+| Network Management Lab.pdf | [Link](basicNetworking/Network%20Management%20Lab.pdf) |
+| CCNA NETWORK ENGINEER.pdf | [Link](basicNetworking/CCNA%20NETWORK%20ENGINEER.pdf) |
 
 ---
 
-### 3. ⚙️ Routing Protocols
+### Routing Protocols
 
 In-depth documentation and troubleshooting for major routing protocols: **BGP**, **OSPF**, **EIGRP**, and **RIP**.
 
@@ -69,7 +69,7 @@ In-depth documentation and troubleshooting for major routing protocols: **BGP**,
 
 ---
 
-### 4. 🌉 Switching & VLANs
+### Switching & VLANs
 
 Materials covering layer 2 concepts, including **STP**, **VLANs**, **Trunks**, and **Cisco** switching basics.
 
@@ -87,7 +87,7 @@ Materials covering layer 2 concepts, including **STP**, **VLANs**, **Trunks**, a
 
 ---
 
-### 5. 🔒 Security & Firewalls
+### Security & Firewalls
 
 Notes and labs related to **Firewalls** (FortiGate, Palo Alto), **IPsec**, **ACLs**, and general security analysis.
 
@@ -107,7 +107,7 @@ Notes and labs related to **Firewalls** (FortiGate, Palo Alto), **IPsec**, **ACL
 
 ---
 
-### 6. 🖥️ CCNA Study Materials
+### CCNA Study Materials
 
 Specific lectures, labs, and comprehensive guides for the **CCNA 200-301** certification exam.
 
@@ -127,7 +127,7 @@ Specific lectures, labs, and comprehensive guides for the **CCNA 200-301** certi
 
 ---
 
-### 7. ☁️ SD-WAN & ACI
+### SD-WAN & ACI
 
 Resources covering modern software-defined networking architectures, specifically **Cisco ACI** (Application Centric Infrastructure) and **SD-WAN** solutions.
 
@@ -141,7 +141,7 @@ Resources covering modern software-defined networking architectures, specificall
 
 ---
 
-### 8. 📜 Command Line & Automation
+### Command Line & Automation
 
 A collection of cheatsheets, scripts, and guides for command-line interfaces (**Cisco**, **Juniper**, **Windows**, **Linux**) and network automation tools like **Netmiko**.
 
@@ -162,7 +162,7 @@ A collection of cheatsheets, scripts, and guides for command-line interfaces (**
 
 ---
 
-### 9. 🔧 Services & Protocols
+### Services & Protocols
 
 Detailed guides and configurations for core network services and protocols, including **Active Directory (AD)**, **DNS**, and **DHCP**.
 
@@ -177,7 +177,7 @@ Detailed guides and configurations for core network services and protocols, incl
 
 ---
 
-### 10. 🔍 Monitoring & Troubleshooting
+### Monitoring & Troubleshooting
 
 Resources focused on diagnosing and resolving network issues, analyzing traffic, managing logs, and using tools like **Wireshark**.
 
@@ -191,7 +191,7 @@ Resources focused on diagnosing and resolving network issues, analyzing traffic,
 
 ---
 
-### 11. 📦 Miscellaneous
+### Miscellaneous
 
 This directory contains resources that did not fit into the other specific categories.
 
