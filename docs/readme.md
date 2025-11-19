@@ -52,20 +52,20 @@ In-depth documentation and troubleshooting for major routing protocols: **BGP**,
 
 | File Name | Link |
 | :--- | :--- |
-| bgp_best_path_selection_algorithm .pdf | [Link](03_Routing_Protocols/bgp_best_path_selection_algorithm%20.pdf) |
-| BGP HA on PAN-OS_ Full-Mesh Multi-Homing Done Right.pdf | [Link](03_Routing_Protocols/BGP%20HA%20on%20PAN-OS_%20Full-Mesh%20Multi-Homing%20Done%20Right.pdf) |
-| BGP Path Selection Process.pdf | [Link](03_Routing_Protocols/BGP%20Path%20Selection%20Process.pdf) |
-| BGP_OSPF_Troubleshooting_Checklists.pdf | [Link](03_Routing_Protocols/BGP_OSPF_Troubleshooting_Checklists.pdf) |
-| BGP.pdf | [Link](03_Routing_Protocols/BGP.pdf) |
-| CCIE BGP Notes.pdf | [Link](03_Routing_Protocols/CCIE%20BGP%20Notes.pdf) |
-| EIGRP NOTES.pdf | [Link](03_Routing_Protocols/EIGRP%20NOTES.pdf) |
-| How to master ccnp route.pdf | [Link](03_Routing_Protocols/How%20to%20master%20ccnp%20route.pdf) |
-| IP Routing Protocols Practice _ Cisco Packet Tracer.pdf | [Link](03_Routing_Protocols/IP%20Routing%20Protocols%20Practice%20_%20Cisco%20Packet%20Tracer.pdf) |
-| IS-IS Protocol Full CCIE Guide.pdf | [Link](03_Routing_Protocols/%C2%A0%20IS-IS%20Protocol%20Full%20CCIE%20Guide.pdf) |
-| OSPF.pdf | [Link](03_Routing_Protocols/OSPF.pdf) |
-| OSPF_Troubleshooting_Tips.pdf | [Link](03_Routing_Protocols/OSPF_Troubleshooting_Tips.pdf) |
-| RIP V2 Configuration.pdf | [Link](03_Routing_Protocols/RIP%20V2%20Configuration.pdf) |
-| Troubleshooting BGP.pdf | [Link](03_Routing_Protocols/Troubleshooting%20BGP.pdf) |
+| bgp_best_path_selection_algorithm .pdf | [Link](routingProtocols/bgp_best_path_selection_algorithm%20.pdf) |
+| BGP HA on PAN-OS_ Full-Mesh Multi-Homing Done Right.pdf | [Link](routingProtocols/BGP%20HA%20on%20PAN-OS_%20Full-Mesh%20Multi-Homing%20Done%20Right.pdf) |
+| BGP Path Selection Process.pdf | [Link](routingProtocols/BGP%20Path%20Selection%20Process.pdf) |
+| BGP_OSPF_Troubleshooting_Checklists.pdf | [Link](routingProtocols/BGP_OSPF_Troubleshooting_Checklists.pdf) |
+| BGP.pdf | [Link](routingProtocols/BGP.pdf) |
+| CCIE BGP Notes.pdf | [Link](routingProtocols/CCIE%20BGP%20Notes.pdf) |
+| EIGRP NOTES.pdf | [Link](routingProtocols/EIGRP%20NOTES.pdf) |
+| How to master ccnp route.pdf | [Link](routingProtocols/How%20to%20master%20ccnp%20route.pdf) |
+| IP Routing Protocols Practice _ Cisco Packet Tracer.pdf | [Link](routingProtocols/IP%20Routing%20Protocols%20Practice%20_%20Cisco%20Packet%20Tracer.pdf) |
+| IS-IS Protocol Full CCIE Guide.pdf | [Link](routingProtocols/%C2%A0%20IS-IS%20Protocol%20Full%20CCIE%20Guide.pdf) |
+| OSPF.pdf | [Link](routingProtocols/OSPF.pdf) |
+| OSPF_Troubleshooting_Tips.pdf | [Link](routingProtocols/OSPF_Troubleshooting_Tips.pdf) |
+| RIP V2 Configuration.pdf | [Link](routingProtocols/RIP%20V2%20Configuration.pdf) |
+| Troubleshooting BGP.pdf | [Link](routingProtocols/Troubleshooting%20BGP.pdf) |
 
 ---
 
