@@ -93,17 +93,17 @@ Notes and labs related to **Firewalls** (FortiGate, Palo Alto), **IPsec**, **ACL
 
 | File Name | Link |
 | :--- | :--- |
-| Firewall Notes.pdf | [Link](github.com/kurtwp/homelab/blob/main/docs/securityFirewall/ 20Notes.pdf) |
-| FortiGate Firewall Lab.pdf | [Link](securityFirewallFortiGate%20Firewall%20Lab.pdf) |
+| Firewall Notes.pdf | [Link](securityFirewall/20Notes.pdf) |
+| FortiGate Firewall Lab.pdf | [Link](securityFirewall/FortiGate%20Firewall%20Lab.pdf) |
 | Getting Started in ICS_OT Cyber Security Lab Manual.pdf | [Link](securityFirewallGetting%20Started%20in%20ICS_OT%20Cyber%20Security%20Lab%20Manual.pdf) |
-| MASTERING FORTIGATE.pdf | [Link](securityFirewall%20MASTERING%20FORTIGATE.pdf) |
-| Network Essential for Cybersecurity.pdf | [Link](securityFirewallNetwork%20Essential%20for%20Cybersecurity.pdf) |
-| Microsoft Windows Security Analysts - RAVIVARMA.pdf | [Link](securityFirewallMicrosoft%20Windows%20Security%20Analysts%20-%20RAVIVARMA.pdf) |
-| Windows Commands for Security Analysts.pdf | [Link](securityFirewallWindows%20Commands%20for%20Security%20Analysts.pdf) |
-| DHCP Relay Setup with Fortigate & Windows Server.pdf | [Link](securityFirewallDHCP%20Relay%20Setup%20with%20Fortigate%20&%20Windows%20Server.pdf) |
-| All-about-IPSEC.pdf | [Link](securityFirewall%C2%A0All-about-IPSEC.pdf) |
-| ARP Protocol .pdf | [Link](securityFirewallARP%20Protocol%20.pdf) |
-| Cisco ACL Slide.pdf | [Link](securityFirewallCisco%20ACL%20Slide.pdf) |
+| MASTERING FORTIGATE.pdf | [Link](securityFirewall%/20MASTERING%20FORTIGATE.pdf) |
+| Network Essential for Cybersecurity.pdf | [Link](securityFirewall/Network%20Essential%20for%20Cybersecurity.pdf) |
+| Microsoft Windows Security Analysts - RAVIVARMA.pdf | [Link](securityFirewall/Microsoft%20Windows%20Security%20Analysts%20-%20RAVIVARMA.pdf) |
+| Windows Commands for Security Analysts.pdf | [Link](securityFirewall/Windows%20Commands%20for%20Security%20Analysts.pdf) |
+| DHCP Relay Setup with Fortigate & Windows Server.pdf | [Link](securityFirewall/DHCP%20Relay%20Setup%20with%20Fortigate%20&%20Windows%20Server.pdf) |
+| All-about-IPSEC.pdf | [Link](securityFirewall/%C2%A0All-about-IPSEC.pdf) |
+| ARP Protocol .pdf | [Link](securityFirewall/ARP%20Protocol%20.pdf) |
+| Cisco ACL Slide.pdf | [Link](securityFirewall/Cisco%20ACL%20Slide.pdf) |
 
 ---
 
