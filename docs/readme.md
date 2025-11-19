@@ -14,7 +14,7 @@ Resources focused on job readiness, interview questions, and career roadmaps.
 
 | File Name | Link |
 | :--- | :--- |
-| 100 important question for interview .pdf | [Link](01_Interview_&_Career_Prep/100%20important%20question%20for%20interview%20.pdf) |
+| 100 important question for interview .pdf | [Link](Career/100%20important%20question%20for%20interview%20.pdf) |
 | 200 IT Security Job Interview Questions.pdf | [Link](01_Interview_&_Career_Prep/200%20IT%20Security%20Job%20Interview%20Questions.pdf) |
 | 50 Interview Questions with answers (CCNA).pdf | [Link](01_Interview_&_Career_Prep/50%20Interview%20Questions%20with%20answers%20(CCNA).pdf) |
 | Cybersecurity Interview Questions.pdf | [Link](01_Interview_&_Career_Prep/Cybersecurity%20Interview%20Questions.pdf) |
