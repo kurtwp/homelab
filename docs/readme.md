@@ -95,8 +95,8 @@ Notes and labs related to **Firewalls** (FortiGate, Palo Alto), **IPsec**, **ACL
 | :--- | :--- |
 | Firewall Notes.pdf | [Link](securityFirewall/20Notes.pdf) |
 | FortiGate Firewall Lab.pdf | [Link](securityFirewall/FortiGate%20Firewall%20Lab.pdf) |
-| Getting Started in ICS_OT Cyber Security Lab Manual.pdf | [Link](securityFirewallGetting%20Started%20in%20ICS_OT%20Cyber%20Security%20Lab%20Manual.pdf) |
-| MASTERING FORTIGATE.pdf | [Link](securityFirewall%/20MASTERING%20FORTIGATE.pdf) |
+| Getting Started in ICS_OT Cyber Security Lab Manual.pdf | [Link](securityFirewall/Getting%20Started%20in%20ICS_OT%20Cyber%20Security%20Lab%20Manual.pdf) |
+| MASTERING FORTIGATE.pdf | [Link](securityFirewall/%/20MASTERING%20FORTIGATE.pdf) |
 | Network Essential for Cybersecurity.pdf | [Link](securityFirewall/Network%20Essential%20for%20Cybersecurity.pdf) |
 | Microsoft Windows Security Analysts - RAVIVARMA.pdf | [Link](securityFirewall/Microsoft%20Windows%20Security%20Analysts%20-%20RAVIVARMA.pdf) |
 | Windows Commands for Security Analysts.pdf | [Link](securityFirewall/Windows%20Commands%20for%20Security%20Analysts.pdf) |
