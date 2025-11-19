@@ -8,7 +8,7 @@ This repository contains a comprehensive collection of PDF and PowerPoint resour
 
 This section provides a detailed view of the files contained within each categorized directory.
 
-### 1. ❓ Interview & Career Prep
+### Interview & Career Prep
 
 Resources focused on job readiness, interview questions, and career roadmaps.
 
