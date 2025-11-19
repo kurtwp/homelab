@@ -1,12 +1,4 @@
-# 📚 Network Engineering & Cybersecurity Resource Hub
 
-This repository contains a comprehensive collection of PDF and PowerPoint resources covering foundational networking, routing, switching, security, and career preparation. The files are organized into subdirectories based on topic for easy navigation.
-
----
-
-## 📂 Directory Structure and Contents
-
-This section provides a detailed view of the files contained within each categorized directory.
 
 ### Interview & Career Prep
 
