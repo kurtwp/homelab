@@ -93,7 +93,7 @@ Notes and labs related to **Firewalls** (FortiGate, Palo Alto), **IPsec**, **ACL
 
 | File Name | Link |
 | :--- | :--- |
-| Firewall Notes.pdf | [Link](securityFirewallFirewall%20Notes.pdf) |
+| Firewall Notes.pdf | [Link](github.com/kurtwp/homelab/blob/main/docs/securityFirewall/ 20Notes.pdf) |
 | FortiGate Firewall Lab.pdf | [Link](securityFirewallFortiGate%20Firewall%20Lab.pdf) |
 | Getting Started in ICS_OT Cyber Security Lab Manual.pdf | [Link](securityFirewallGetting%20Started%20in%20ICS_OT%20Cyber%20Security%20Lab%20Manual.pdf) |
 | MASTERING FORTIGATE.pdf | [Link](securityFirewall%20MASTERING%20FORTIGATE.pdf) |
