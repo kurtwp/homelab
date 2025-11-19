@@ -15,16 +15,16 @@ Resources focused on job readiness, interview questions, and career roadmaps.
 | File Name | Link |
 | :--- | :--- |
 | 100 important question for interview .pdf | [Link](Career/100%20important%20question%20for%20interview%20.pdf) |
-| 200 IT Security Job Interview Questions.pdf | [Link](01_Interview_&_Career_Prep/200%20IT%20Security%20Job%20Interview%20Questions.pdf) |
-| 50 Interview Questions with answers (CCNA).pdf | [Link](01_Interview_&_Career_Prep/50%20Interview%20Questions%20with%20answers%20(CCNA).pdf) |
-| Cybersecurity Interview Questions.pdf | [Link](01_Interview_&_Career_Prep/Cybersecurity%20Interview%20Questions.pdf) |
-| Cybersecurity Executive Self-Assesment Test.pdf | [Link](01_Interview_&_Career_Prep/Cybersecurity%20Executive%20Self-Assesment%20Test.pdf) |
-| Detailed roadmap to various cybersecurity domains .pdf | [Link](01_Interview_&_Career_Prep/Detailed%20roadmap%20to%20various%20cybersecurity%20domains%20.pdf) |
-| interview questions .pdf | [Link](01_Interview_&_Career_Prep/interview%20questions%20.pdf) |
-| Network Engineer Quick Reference Notes.pdf | [Link](01_Interview_&_Career_Prep/Network%20Engineer%20Quick%20Reference%20Notes.pdf) |
-| Top 100 Beginner Network Engineer & CCNA Interview Questio.pdf | [Link](01_Interview_&_Career_Prep/Top%20100%20Beginner%20Network%20Engineer%20&%20CCNA%20Interview%20Questio.pdf) |
-| network engineer .pdf | [Link](01_Interview_&_Career_Prep/network%20engineer%20.pdf) |
-| day !.pdf | [Link](01_Interview_&_Career_Prep/day%20!.pdf) |
+| 200 IT Security Job Interview Questions.pdf | [Link](Career/200%20IT%20Security%20Job%20Interview%20Questions.pdf) |
+| 50 Interview Questions with answers (CCNA).pdf | [Link](Career/50%20Interview%20Questions%20with%20answers%20(CCNA).pdf) |
+| Cybersecurity Interview Questions.pdf | [Link](Career/Cybersecurity%20Interview%20Questions.pdf) |
+| Cybersecurity Executive Self-Assesment Test.pdf | [Link](Career/Cybersecurity%20Executive%20Self-Assesment%20Test.pdf) |
+| Detailed roadmap to various cybersecurity domains .pdf | [Link](Career/Detailed%20roadmap%20to%20various%20cybersecurity%20domains%20.pdf) |
+| interview questions .pdf | [Link](Career/interview%20questions%20.pdf) |
+| Network Engineer Quick Reference Notes.pdf | [Link](Career/Network%20Engineer%20Quick%20Reference%20Notes.pdf) |
+| Top 100 Beginner Network Engineer & CCNA Interview Questio.pdf | [Link](Career/Top%20100%20Beginner%20Network%20Engineer%20&%20CCNA%20Interview%20Questio.pdf) |
+| network engineer .pdf | [Link](Career/network%20engineer%20.pdf) |
+| day !.pdf | [Link](Career/day%20!.pdf) |
 
 ---
 
