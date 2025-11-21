@@ -7,7 +7,7 @@ Resources focused on job readiness, interview questions, and career road maps.
 | File Name | Link |
 | :--- | :--- |
 | Carrier Prep | [Link](Career) |
-| General Networking & Basics | [Link](basicNetwroking) |
+| General Networking & Basics | [Link](basicNetworking) |
 | CCNA Study | [Link](ccnaStudy) |
 | Cheat Sheets| [Link](cheatSheets) |
 | Command Line| [Link](commandLine) |
