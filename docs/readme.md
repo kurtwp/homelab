@@ -150,7 +150,6 @@ A collection of cheatsheets, scripts, and guides for command-line interfaces (**
 | Cisco Switch Backup Script using Netmiko.pdf | [Link](commandLine/Cisco%20Switch%20Backup%20Script%20using%20Netmiko.pdf) |
 | CMD Commands.pdf | [Link](commandLine/CMD%20Commands.pdf) |
 | COMMAND-LINE-CHEAT-SHEETS-Cisco- Juniper-Alcatel-Huawei.pdf | [Link](commandLine/COMMAND-LINE-CHEAT-SHEETS-Cisco-%20Juniper-Alcatel-Huawei.pdf) |
-| 𝐂𝐢𝐬𝐜𝐨 𝐏𝐨𝐥𝐢𝐜𝐲-𝐁𝐚𝐬𝐞𝐝 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭.pdf | [Link](commandLine/%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A7%F0%9D%90%AD%20%F0%9D%90%A3%F0%9D%90%A8%F0%9D%90%A5%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%B2-%F0%9D%90%81%F0%9D%90%9A%F0%9D%90%BD%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%A0%20%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD.pdf) |
 | juniper_cli_cheat_sheet-1.pdf | [Link](commandLine/juniper_cli_cheat_sheet-1.pdf) |
 | juniper_cli_cheat_sheet.pdf | [Link](commandLine/juniper_cli_cheat_sheet.pdf) |
 | Lecture 10 part 2_ SSH and OSI Model.pdf | [Link](commandLine/Lecture%2010%20part%202_%20SSH%20and%20OSI%20Model.pdf) |
