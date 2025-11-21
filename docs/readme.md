@@ -164,12 +164,12 @@ Detailed guides and configurations for core network services and protocols, incl
 
 | File Name | Link |
 | :--- | :--- |
-| AD.pdf | [Link](09_Services_&_Protocols/%C2%A0AD.pdf) |
-| Basic ISP Network Configuration – Step-by-Step Guide.pdf | [Link](09_Services_&_Protocols/%F0%9F%93%84%20Basic%20ISP%20Network%20Configuration%20%E2%80%93%20Step-by-Step%20Guide.pdf) |
-| Configuration of AD_DNS_DHCP_RDS.pdf | [Link](09_Services_&_Protocols/Configuration%20of%20AD_DNS_DHCP_RDS.pdf) |
-| DNS .pdf | [Link](09_Services_&_Protocols/DNS%20.pdf) |
-| meraki-branch.pdf | [Link](09_Services_&_Protocols/%C2%A0meraki-branch.pdf) |
-| Step by Step Technical Guide On How I Deployed AD DS .pdf | [Link](09_Services_&_Protocols/Step%20by%20Step%20Technical%20Guide%20On%20How%20I%20Deployed%20AD%20DS%20.pdf) |
+| AD.pdf | [Link](serviceProtocols/%C2%A0AD.pdf) |
+| Basic ISP Network Configuration – Step-by-Step Guide.pdf | [Link](serviceProtocols/%F0%9F%93%84%20Basic%20ISP%20Network%20Configuration%20%E2%80%93%20Step-by-Step%20Guide.pdf) |
+| Configuration of AD_DNS_DHCP_RDS.pdf | [Link](serviceProtocols/Configuration%20of%20AD_DNS_DHCP_RDS.pdf) |
+| DNS .pdf | [Link](serviceProtocols/DNS%20.pdf) |
+| meraki-branch.pdf | [Link](serviceProtocols/%C2%A0meraki-branch.pdf) |
+| Step by Step Technical Guide On How I Deployed AD DS .pdf | [Link](serviceProtocols/Step%20by%20Step%20Technical%20Guide%20On%20How%20I%20Deployed%20AD%20DS%20.pdf) |
 
 ---
 
