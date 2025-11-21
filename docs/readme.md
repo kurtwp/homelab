@@ -180,7 +180,7 @@ Resources focused on diagnosing and resolving network issues, analyzing traffic,
 | File Name | Link |
 | :--- | :--- |
 | Network Troubleshooting.pdf | [Link](monitoring/NetworkTroubleshooting.pdf) |
-| Network Troubleshooting .pdf | [Link](monitoring/NetworkTroubleshooting.pdf) |
+| Network Troubleshooting .pdf | [Link](monitoring/NetworkTroubleshooting1.pdf) |
 | simple concept of logs.pdf | [Link](monitoring/simpleconceptoflog.pdf) |
 | Wireshark and Traffic Analysis PDF.pdf | [Link](monitoring/WiresharkandTraffiAnalysisPDF.pdf) |
 
