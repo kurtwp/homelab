@@ -11,7 +11,7 @@ Resources focused on job readiness, interview questions, and career road maps.
 | CCNA Study | [Link](ccnaStudy) |
 | Cheat Sheets| [Link](cheatSheets) |
 | Command Line| [Link](commandLine) |
-| My Home Network | [Link](homeNetworking) |
+| My Home Network | [Link](homeNetwork) |
 | Routing Protocols | [Link](routingProtocols) |
 | Network Engineer Quick Reference Notes.pdf | [Link](Career/Network%20Engineer%20Quick%20Reference%20Notes.pdf) |
 | Top 100 Beginner Network Engineer & CCNA Interview Questio.pdf | [Link](Career/Top%20100%20Beginner%20Network%20Engineer%20&%20CCNA%20Interview%20Questio.pdf) |
