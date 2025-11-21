@@ -13,8 +13,11 @@ Resources focused on job readiness, interview questions, and career road maps.
 | Command Line| [Link](commandLine) |
 | My Home Network | [Link](homeNetwork) |
 | Routing Protocols | [Link](routingProtocols) |
-| Network Engineer Quick Reference Notes.pdf | [Link](Career/Network%20Engineer%20Quick%20Reference%20Notes.pdf) |
-| Top 100 Beginner Network Engineer & CCNA Interview Questio.pdf | [Link](Career/Top%20100%20Beginner%20Network%20Engineer%20&%20CCNA%20Interview%20Questio.pdf) |
-| network engineer .pdf | [Link](Career/network%20engineer%20.pdf) |
-| day !.pdf | [Link](Career/day%20!.pdf) |
+| SD-WAN | [Link](sdWAN) |
+| Security & Firewalls | [Link](securityFirewall) |
+| nServices & Protocols | [Link](CserviceProtocols) |
+| Switching & VLANs | [Link](switchVLAN) |
+| Troubleshooting | [Link}](troubleshooting) |
+| Ubiquiti | [Link}](ubiquiti) |
+| Wireshark | [Link}](wireshark) |
 
