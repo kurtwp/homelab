@@ -172,25 +172,3 @@ Detailed guides and configurations for core network services and protocols, incl
 | Step by Step Technical Guide On How I Deployed AD DS .pdf | [Link](serviceProtocols/Step%20by%20Step%20Technical%20Guide%20On%20How%20I%20Deployed%20AD%20DS%20.pdf) |
 
 ---
-
-### Monitoring & Troubleshooting
-
-Resources focused on diagnosing and resolving network issues, analyzing traffic, managing logs, and using tools like **Wireshark**.
-
-| File Name | Link |
-| :--- | :--- |
-| Network Troubleshooting.pdf | [Link](montoring/NetworkTroubleshooting.pdf) |
-| simple concept of logs.pdf | [Link](montoring/simpleconceptoflogs.pdf) |
-| Wireshark and Traffic Analysis PDF.pdf | [Link](monitoring/WiresharkandTraffiAnalysisPDF.pdf) |
-
----
-
-### Miscellaneous
-
-This directory contains resources that did not fit into the other specific categories.
-
-| File Name | Link |
-| :--- | :--- |
-| Certificate-936559-12035.pdf | [Link](11_Miscellaneous/%C2%A0Certificate-936559-12035.pdf) |
-| cs tools.pdf | [Link](11_Miscellaneous/cs%20tools.pdf) |
-| Mastering Routers and Switches in Networking.pdf | [Link](11_Miscellaneous/Mastering%20Routers%20and%20Switches%20in%20Networking.pdf) |
