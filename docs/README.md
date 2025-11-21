@@ -17,7 +17,7 @@ Resources focused on job readiness, interview questions, and career road maps.
 | Security & Firewalls | [Link](securityFirewall) |
 | nServices & Protocols | [Link](CserviceProtocols) |
 | Switching & VLANs | [Link](switchVLAN) |
-| Troubleshooting | [Link}](troubleshooting) |
-| Ubiquiti | [Link}](ubiquiti) |
-| Wireshark | [Link}](wireshark) |
+| Troubleshooting | [Link](troubleshooting) |
+| Ubiquiti | [Link](ubiquiti) |
+| Wireshark | [Link](wireshark) |
 
