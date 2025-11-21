@@ -18,6 +18,6 @@ Resources focused on job readiness, interview questions, and career road maps.
 | nServices & Protocols | [Link](CserviceProtocols) |
 | Switching & VLANs | [Link](switchVLAN) |
 | Troubleshooting | [Link](troubleshooting) |
-| Ubiquiti | [Link](ubiquiti) |
+| Ubiquiti | [Link](ubiquiti/communityResources.md) |
 | Wireshark | [Link](wireshark) |
 
