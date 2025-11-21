@@ -40,7 +40,6 @@ Foundational concepts, general notes, and essential guides for all levels.
 | Doc.pdf | [Link](basicNetworking/Doc.pdf) |
 | Net.pdf | [Link](basicNetworking/Net.pdf) |
 | Networking for DevOps .pdf | [Link](basicNetworking/Networking%20for%20DevOps%20.pdf) |
-| Networking for DevOps -1.pdf | [Link](basicNetworking/Networking%20for%20DevOps%20-1.pdf) |
 | Network Management Lab.pdf | [Link](basicNetworking/Network%20Management%20Lab.pdf) |
 | CCNA NETWORK ENGINEER.pdf | [Link](basicNetworking/CCNA%20NETWORK%20ENGINEER.pdf) |
 
