@@ -9,8 +9,8 @@ Resources focused on job readiness, interview questions, and career road maps.
 | Carrier Prep | [Link](Career) |
 | General Networking & Basics | [Link](basicNetwroking) |
 | CCNA Study | [Link](ccnaStudy) |
-| Cybersecurity Interview Questions.pdf | [Link](Career/Cybersecurity%20Interview%20Questions.pdf) |
-| Cybersecurity Executive Self-Assesment Test.pdf | [Link](Career/Cybersecurity%20Executive%20Self-Assesment%20Test.pdf) |
+| Cheat Sheets| [Link](cheatSheets) |
+| Command Line| [Link](commandLine) |
 | Detailed roadmap to various cybersecurity domains .pdf | [Link](Career/Detailed%20roadmap%20to%20various%20cybersecurity%20domains%20.pdf) |
 | interview questions .pdf | [Link](Career/interview%20questions%20.pdf) |
 | Network Engineer Quick Reference Notes.pdf | [Link](Career/Network%20Engineer%20Quick%20Reference%20Notes.pdf) |
