@@ -131,11 +131,11 @@ Resources covering modern software-defined networking architectures, specificall
 
 | File Name | Link |
 | :--- | :--- |
-| Cisco ACI.pdf | [Link](07_SD-WAN_&_ACI/Cisco%20ACI.pdf) |
-| Cisco ACI Shared L3OUT.pdf | [Link](07_SD-WAN_&_ACI/Cisco%20ACI%20Shared%20L3OUT.pdf) |
-| Onboarding Cisco SD-WAN.pdf | [Link](07_SD-WAN_&_ACI/Onboarding%20Cisco%20SD-WAN.pdf) |
-| Practical VRF Leaking with Cisco ACI Shared L3Out.pdf | [Link](07_SD-WAN_&_ACI/Practical%20VRF%20Leaking%20with%20Cisco%20ACI%20Shared%20L3Out.pdf) |
-| SD-WAN.pdf | [Link](07_SD-WAN_&_ACI/%C2%A0SD-WAN.pdf) |
+| Cisco ACI.pdf | [Link](sdWAN/Cisco%20ACI.pdf) |
+| Cisco ACI Shared L3OUT.pdf | [Link](sdWAN/Cisco%20ACI%20Shared%20L3OUT.pdf) |
+| Onboarding Cisco SD-WAN.pdf | [Link](sdWAN/Onboarding%20Cisco%20SD-WAN.pdf) |
+| Practical VRF Leaking with Cisco ACI Shared L3Out.pdf | [Link](sdWAN/Practical%20VRF%20Leaking%20with%20Cisco%20ACI%20Shared%20L3Out.pdf) |
+| SD-WAN.pdf | [Link](sdWAN/%C2%A0SD-WAN.pdf) |
 
 ---
 
