@@ -145,18 +145,18 @@ A collection of cheatsheets, scripts, and guides for command-line interfaces (**
 
 | File Name | Link |
 | :--- | :--- |
-| 75+ windows command.pdf | [Link](08_Command_Line_&_Automation/75+%20windows%20command.pdf) |
-| Cisco Switch Backup Script using Netmiko-1.pdf | [Link](08_Command_Line_&_Automation/Cisco%20Switch%20Backup%20Script%20using%20Netmiko-1.pdf) |
-| Cisco Switch Backup Script using Netmiko.pdf | [Link](08_Command_Line_&_Automation/Cisco%20Switch%20Backup%20Script%20using%20Netmiko.pdf) |
-| CMD Commands.pdf | [Link](08_Command_Line_&_Automation/CMD%20Commands.pdf) |
-| COMMAND-LINE-CHEAT-SHEETS-Cisco- Juniper-Alcatel-Huawei.pdf | [Link](08_Command_Line_&_Automation/COMMAND-LINE-CHEAT-SHEETS-Cisco-%20Juniper-Alcatel-Huawei.pdf) |
-| 𝐂𝐢𝐬𝐜𝐨 𝐏𝐨𝐥𝐢𝐜𝐲-𝐁𝐚𝐬𝐞𝐝 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭.pdf | [Link](08_Command_Line_&_Automation/%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A7%F0%9D%90%AD%20%F0%9D%90%A3%F0%9D%90%A8%F0%9D%90%A5%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%B2-%F0%9D%90%81%F0%9D%90%9A%F0%9D%90%BD%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%A0%20%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD.pdf) |
-| juniper_cli_cheat_sheet-1.pdf | [Link](08_Command_Line_&_Automation/%C2%A0juniper_cli_cheat_sheet-1.pdf) |
-| juniper_cli_cheat_sheet.pdf | [Link](08_Command_Line_&_Automation/%C2%A0juniper_cli_cheat_sheet.pdf) |
-| Lecture 10 part 2_ SSH and OSI Model.pdf | [Link](08_Command_Line_&_Automation/Lecture%2010%20part%202_%20SSH%20and%20OSI%20Model.pdf) |
-| Passwordless SSH in Linux.pdf | [Link](08_Command_Line_&_Automation/Passwordless%20SSH%20in%20Linux.pdf) |
-| Routing Operations in Cisco IOS Routers.pdf | [Link](08_Command_Line_&_Automation/Routing%20Operations%20in%20Cisco%20IOS%20Routers.pdf) |
-| Simplifying Linux Networking Commands for Beginners.pdf | [Link](08_Command_Line_&_Automation/Simplifying%20Linux%20Networking%20Commands%20for%20Beginners.pdf) |
+| 75+ windows command.pdf | [Link](commandLine/75+%20windows%20command.pdf) |
+| Cisco Switch Backup Script using Netmiko-1.pdf | [Link](commandLine/Cisco%20Switch%20Backup%20Script%20using%20Netmiko-1.pdf) |
+| Cisco Switch Backup Script using Netmiko.pdf | [Link](commandLine/Cisco%20Switch%20Backup%20Script%20using%20Netmiko.pdf) |
+| CMD Commands.pdf | [Link](commandLine/CMD%20Commands.pdf) |
+| COMMAND-LINE-CHEAT-SHEETS-Cisco- Juniper-Alcatel-Huawei.pdf | [Link](commandLine/COMMAND-LINE-CHEAT-SHEETS-Cisco-%20Juniper-Alcatel-Huawei.pdf) |
+| 𝐂𝐢𝐬𝐜𝐨 𝐏𝐨𝐥𝐢𝐜𝐲-𝐁𝐚𝐬𝐞𝐝 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭.pdf | [Link](commandLine/%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A7%F0%9D%90%AD%20%F0%9D%90%A3%F0%9D%90%A8%F0%9D%90%A5%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%B2-%F0%9D%90%81%F0%9D%90%9A%F0%9D%90%BD%F0%9D%90%9C%F0%9D%90%9E%F0%9D%90%A0%20%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%9F%F0%9D%90%9E%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD.pdf) |
+| juniper_cli_cheat_sheet-1.pdf | [Link](commandLine/%C2%A0juniper_cli_cheat_sheet-1.pdf) |
+| juniper_cli_cheat_sheet.pdf | [Link](commandLine/%C2%A0juniper_cli_cheat_sheet.pdf) |
+| Lecture 10 part 2_ SSH and OSI Model.pdf | [Link](commandLine/Lecture%2010%20part%202_%20SSH%20and%20OSI%20Model.pdf) |
+| Passwordless SSH in Linux.pdf | [Link](commandLine/Passwordless%20SSH%20in%20Linux.pdf) |
+| Routing Operations in Cisco IOS Routers.pdf | [Link](commandLine/Routing%20Operations%20in%20Cisco%20IOS%20Routers.pdf) |
+| Simplifying Linux Networking Commands for Beginners.pdf | [Link](commandLine/Simplifying%20Linux%20Networking%20Commands%20for%20Beginners.pdf) |
 
 ---
 
