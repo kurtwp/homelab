@@ -35,11 +35,11 @@ This documentation directly demonstrates my expertise in **Networking**<small>(V
 
 ---
 ### Dive In: Labs and Configurations
-1. ### Overview
-    - The [/docs](docs) folder contains various equipment, default diagrams, and technical presentations.
-    - The [/certs](certs) folder has the resourtces I used to achieve my JNCIA & CCNA certifications
-    - The [/projects](projects) folder contains labs I set up and the steps and configuration files used to complete the labs.
-    - My [/resume](resume)
+
+- The [/docs](docs) folder contains various equipment, default diagrams, and technical presentations.
+- The [/certs](certs) folder has the resourtces I used to achieve my JNCIA & CCNA certifications
+- The [/projects](projects) folder contains labs I set up and the steps and configuration files used to complete the labs.
+- My [/resume](resume)
 <!--
     -  The [/ansible](ansible) folder contains all playbooks for configuring services, managing users, and ensuring system compliance across my various servers.
 -->
