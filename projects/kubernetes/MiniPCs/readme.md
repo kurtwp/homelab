@@ -15,7 +15,7 @@ Why this setup?
    <b>E1 Intel Twin Lake N150 Mini PC</b><br>
   <img src="https://github.com/kurtwp/homelab/blob/984ba311e2f0779b1e2d0f71ec9b41ac99aafa9a/projects/kubernetes/img/E1.png" alt="Kumrui Mini PC" style="width=80%;height=auto">
 </p>
----
+
 If you're looking to stay with INTEL CPUs you can tweak your setup even further, using higher spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. 
 
 For worker nodes, you can save a few bucks by going with Intel N95 mini PCs that come with 8GB RAM and, ideally, a 512GB SSD. While they’re slightly less powerful, they’re more than capable of running container workloads and the cost savings can add up if you're scaling your cluster.
