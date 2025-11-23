@@ -10,7 +10,7 @@ Why this setup?
 - **Storage**: With 512GB SSDs, I have fast SSD storage for container images, and logs.
 - **Power**: These mini PCs sip power compared to full desktops or servers. The Kamrui mini PCs are great for running Kubernets node 24/7.
 - **Cost**: $149 each (plus $15 off and free shipping when I bought them). Hard to beat.
-- 
+  
 <p align="center">
   <img src="https://github.com/kurtwp/homelab/blob/984ba311e2f0779b1e2d0f71ec9b41ac99aafa9a/projects/kubernetes/img/E1.png" alt="Kumrui Mini PC" style="width=80%;height=auto">
 </p>
