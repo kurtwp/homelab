@@ -12,7 +12,7 @@ Why this setup?
 - **Cost**: $149 each (plus $15 off and free shipping when I bought them). Hard to beat.
 - 
 <p align="center">
-  <img src="https://github.com/kurtwp/homelab/blob/dd88f9017a690163ad3abfd828dbf2409907a5a8/projects/kubernetes/img/E1-150N.png" alt="Kumrui Mini PC" style="width=80%;height=auto">
+  <img src="https://github.com/kurtwp/homelab/blob/dd88f9017a690163ad3abfd828dbf2409907a5a8/projects/kubernetes/img/E1.png" alt="Kumrui Mini PC" style="width=80%;height=auto">
 </p>
 ---
 If you're looking to stay with INTEL CPUs you can tweak your setup even further, using higher spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. 
