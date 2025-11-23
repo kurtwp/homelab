@@ -10,7 +10,9 @@ Why this setup?
 - **Storage**: With 512GB SSDs, I have fast SSD storage for container images, and logs.
 - **Power**: These mini PCs sip power compared to full desktops or servers. The Kamrui mini PCs are great for running Kubernets node 24/7.
 - **Cost**: $149 each (plus $15 off and free shipping when I bought them). Hard to beat.    
-
+<p align="center">
+  <img src="img/DB.jpg" alt="Database Schema Diagram" width="60%">
+</p>
 ---
 If you're looking to stay with INTEL CPUs you can tweak your setup even further, using higher spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. 
 
