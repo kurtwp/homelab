@@ -35,3 +35,5 @@ Of course, there’s also the option to buy used equipment, which can offer more
 <p align="center">
   <a href="https://github.com/kurtwp/homelab/tree/7bbf0155972c7112ac0b89ac81e3001861131b04/projects/kubernetes" target="_blank"><strong>BACK</strong></a>
 </p>
+
+https://github.com/kurtwp/homelab/tree/7ffb6af3d513294937ea89a6892851f75814d3dc/projects/kubernetes
