@@ -1,0 +1,21 @@
+kub@kubcontrol:~$ sudo cat /etc/netplan/50-cloud-init.org
+network:
+  version: 2
+  ethernets:
+    enp1s0:
+      dhcp4: true
+kub@kubcontrol:~$ sudo cat /etc/netplan/50-cloud-init.yaml
+network:
+  version: 2
+  ethernets:
+    enp1s0:
+      dhcp4: no
+      addresses:
+        - 192.168.2.8/24
+      routes:
+        - to: default
+          via: 192.168.2.254
+      nameservers:
+        addresses:
+          - 1.1.1.1
+          - 192.168.2.5
