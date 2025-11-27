@@ -1,6 +1,6 @@
 ## enp1s0
 
-```cmd
+```bash
 kub@kubcontrol:~$ sudo cat /etc/netplan/50-cloud-init.org
 network:
   version: 2
