@@ -1,3 +1,4 @@
+''' bash
 kub@kubcontrol:~$ sudo cat /etc/netplan/50-cloud-init.org
 network:
   version: 2
@@ -19,3 +20,4 @@ network:
         addresses:
           - 1.1.1.1
           - 192.168.2.5
+'''
