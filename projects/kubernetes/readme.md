@@ -19,7 +19,7 @@ This repository documents the process of building a small **Kubernetes cluster**
 ```
 
 ## ✅ Goals
-- Learn and document a reproducible homelab Kubernetes setup
+- Learn and document a reproducible home lab Kubernetes setup
 - Keep costs and power usage low using MiniPCs
 - Use Ubuntu Server LTS for stability and support
 
@@ -104,7 +104,7 @@ sudo sysctl --system
 - Diagrams: _cluster architecture (forthcoming)_
 
 ## �️ Tags
-Ubuntu Server, 24.04.3, Kumrui MiniPC, Kubernetes, kubeadm, homelab, Linux, server, containerd
+Ubuntu Server, 24.04.3, Kumrui MiniPC, Kubernetes, kubeadm, home lab, Linux, server, containerd
 
 ## � Useful Links
 - Ubuntu Server download: https://ubuntu.com/download/server
