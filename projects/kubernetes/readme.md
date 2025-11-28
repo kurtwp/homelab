@@ -1,4 +1,4 @@
-# Kubernetes Homelab on Kumrui MiniPCs
+# Kubernetes Home Lab on Kumrui MiniPCs
 
 > **Series — Step 1:** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs
 
