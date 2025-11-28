@@ -108,6 +108,7 @@ Ubuntu Server, 24.04.3, Kumrui MiniPC, Kubernetes, kubeadm, homelab, Linux, serv
 
 ## � Useful Links
 - Ubuntu Server download: https://ubuntu.com/download/server
+- Kumrui MiniPC Specs: https://kamrui.store/products/kamrui-e1-twin-lake-n150
 - Kubernetes docs: https://kubernetes.io/docs/
 
 ## � Contributing
