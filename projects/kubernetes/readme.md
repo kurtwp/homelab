@@ -31,6 +31,7 @@ This repository documents the process of building a small **Kubernetes cluster**
 
 ## � Software
 - **OS:** Ubuntu Server **24.04.3 LTS**
+- **K3s:** v1.34.2+k3s1
 - **Tools:** Using the following:
   * Ventoy but you can use Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
   * GL-iNet KVM
