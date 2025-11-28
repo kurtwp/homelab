@@ -31,7 +31,9 @@ This repository documents the process of building a small **Kubernetes cluster**
 
 ## � Software
 - **OS:** Ubuntu Server **24.04.3 LTS**
-- **Tools:** Using Ventoy but you can use Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
+- **Tools:** Using the following:
+  * Ventoy but you can use Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
+  * GL-iNet KVM
 <!--
 ## � Prerequisites
 - BIOS access on each MiniPC (USB boot enabled; Secure Boot off if needed)
