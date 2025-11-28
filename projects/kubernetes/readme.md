@@ -24,16 +24,16 @@ This repository documents the process of building a small **Kubernetes cluster**
 - Use Ubuntu Server LTS for stability and support
 
 ## �️ Hardware
-- **3× Kumrui MiniPCs** (model and specs: _add details_)
-- **Network:** Gigabit switch/router, DHCP (or static IPs)
+- **3× Kumrui MiniPCs** (E1 Intel 150, 16 GB, 512 GB)
+- **Network:** Inital install DHCP then changing to Static IPs)
 - **Storage:** Built-in SSDs (recommend ≥ 256 GB)
-- **USB drive:** 8 GB+ for Ubuntu installer
+- **USB drive:** 8 GB+ for Ubuntu installer (Using Ventoy)
 
 ## � Software
 - **OS:** Ubuntu Server **24.04.3 LTS**
-- **Tools:** Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
+- **Tools:** Using Ventoy but you can use Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
 - **Kubernetes:** Kubeadm (planned), container runtime (containerd)
-
+<!--
 ## � Prerequisites
 - BIOS access on each MiniPC (USB boot enabled; Secure Boot off if needed)
 - Network connectivity to your LAN
@@ -97,7 +97,7 @@ sudo sysctl --system
 - Ping between nodes
 - SSH into each node
 - Verify hostname, IP, and package updates
-
+-->
 ## � Assets
 - Thumbnail: `thumbnail_compressed.jpg` (YouTube and docs)
 - Photos: _add your setup images to `images/`_
