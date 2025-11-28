@@ -25,7 +25,7 @@ This repository documents the process of building a small **Kubernetes cluster**
 
 ## �️ Hardware
 - **3× Kumrui MiniPCs** (E1 Intel 150, 16 GB, 512 GB)
-- **Network:** Inital install DHCP then changing to Static IPs)
+- **Network:** Inital install DHCP then changing to Static IPs
 - **Storage:** Built-in SSDs (recommend ≥ 256 GB)
 - **USB drive:** 8 GB+ for Ubuntu installer (Using Ventoy)
 
