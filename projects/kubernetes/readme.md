@@ -99,12 +99,12 @@ sudo sysctl --system
 - Ping between nodes
 - SSH into each node
 - Verify hostname, IP, and package updates
--->
+
 ## � Assets
 - Thumbnail: `thumbnail_compressed.jpg` (YouTube and docs)
 - Photos: _add your setup images to `images/`_
 - Diagrams: _cluster architecture (forthcoming)_
-
+-->
 ## �️ Tags
 Ubuntu Server, 24.04.3, Kumrui MiniPC, Kubernetes, kubeadm, home lab, Linux, server, containerd
 
