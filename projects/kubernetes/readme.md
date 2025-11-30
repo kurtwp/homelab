@@ -6,7 +6,7 @@
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs**. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through cluster prerequisites, Kubernetes installation, and deploying workloads.
 
 ## 📺 Watch the Full Tutorial
-[![Watch on YouTube](https://i9.ytimg.com/vi_webp/UzL1Ee14wzo/mqdefault.webp?v=692a0ae6&sqp=CNCaqMkG&rs=AOn4CLCTwT-_7LBw2Ie8iUXdMlib9kUOxw)](https://youtu.be/UzL1Ee14wzo)
+[![Watch on YouTube](https://img.youtube.com/vi/UzL1Ee14wzo/maxresdefault.jpg)](https://youtu.be/UzL1Ee14wzo)
 
 ## � Repository Structure
 ```
