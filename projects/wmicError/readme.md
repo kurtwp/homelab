@@ -29,12 +29,12 @@ If you see the error above, WMIC is missing.
 3. Search for **WMIC**
 4. Select it and click **Next** then  **Add**
 
-Adding **WMIC** will take at least five minitues to install. 
+Adding **WMIC** will take at least five minutes to install. 
 
 ---
 
 ### 3. Verify Installation
-After installation, open **Command Prompt** again and run ad administrator:
+After installation, open **Command Prompt** again and run as administrator:
 ```cmd
 wmic
 ```
