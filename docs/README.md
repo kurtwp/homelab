@@ -11,6 +11,7 @@ Resources focused on job readiness, interview questions, and career road maps.
 | CCNA Study | [Link](ccnaStudy) |
 | Cheat Sheets| [Link](cheatSheets) |
 | Command Line| [Link](commandLine) |
+| Linux Commands | [Link](linuxCommnad) |
 | Routing Protocols | [Link](routingProtocols) |
 | SD-WAN | [Link](sdWAN) |
 | Security & Firewalls | [Link](securityFirewall) |
