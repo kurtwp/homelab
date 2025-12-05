@@ -1,3 +1,8 @@
 ## NCAT
 
-nv -l <port> -- Will list on a port
+
+
+Listen on a port:  `nc -l <port>`
+
+
+
