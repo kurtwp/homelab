@@ -4,6 +4,10 @@
 | :---             | :--- |
 | Listen on a port |  `nc -l <port>` |
 | Port Scan        |  `nc -z <target IP> <port range>` |
+
+
+> [!Note]
+> In most cases **netcat** is interchangeable with **nc**.
 <br>
 <p>
   <h2>NCAT scanning examples</h2>
