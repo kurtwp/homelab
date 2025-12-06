@@ -3,7 +3,7 @@
 
 This guide explains how to configure Netplan with proper indentation, routes, and DNS settings.
 
-## ✅ Indentation Rules
+## Indentation Rules
 - Use **spaces only** (never tabs).
 - Each level increases by **2 spaces**.
 - Lists (`- item`) are indented under their parent key.
@@ -13,7 +13,7 @@ This guide explains how to configure Netplan with proper indentation, routes, an
 
 ---
 
-## ✅ Example Configuration (with YAML syntax highlighting)
+## Example Configuration (with YAML syntax highlighting)
 ```yaml
 network:                  # Level 0 (0 spaces)
   version: 2              # Level 1 (2 spaces)
@@ -34,7 +34,7 @@ network:                  # Level 0 (0 spaces)
 
 ---
 
-## ✅ Explanation of Sections
+## Explanation of Sections
 - **network:** Root key for Netplan configuration.
 - **version:** Netplan config version (always `2`).
 - **renderer:** Backend (`networkd` for servers, `NetworkManager` for desktops).
@@ -47,7 +47,7 @@ network:                  # Level 0 (0 spaces)
 
 ---
 
-## ✅ How to Apply
+## How to Apply
 ```bash
 cd /etc/netplan
 sudo cp 50-cloud-init.yaml 50-cloud-init.org (backup of the orginal .yaml file)
@@ -57,10 +57,6 @@ sudo netplan apply
 
 ---
 
-## ✅ Notes
+## Notes
 - Use `to: default` or `to: 0.0.0.0/0` for IPv4 default route.
 - For IPv6, use `to: ::/0`.
-- Test safely with:
-```bash
-sudo netplan try
-
