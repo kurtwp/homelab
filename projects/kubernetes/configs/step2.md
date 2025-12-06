@@ -101,7 +101,7 @@ In **Step 3**, we’ll prepare these nodes for Kubernetes by disabling swap, con
 
 ***
 
-## <a id="resources"></a>  Resources
+### <a id="resources"></a>  Resources
 
 *   Netplan Documentation
 *   Ubuntu Networking Guide
