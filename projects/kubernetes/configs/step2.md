@@ -6,7 +6,7 @@
 ## Overview
 In **Step 1**, we installed **Ubuntu Server 24.04.3 LTS** on three Kumrui MiniPCs. Now, in **Step 2**, we’ll configure **static IP addresses** for each node. This ensures consistent networking for our upcoming Kubernetes cluster setup.
 > [!Note]
-> See Resorces below for indepth ionformation pretaiing the the commands being used on this page. 
+> [Go to Resorces](#resources) below for indepth ionformation pretaiing the the commands being used on this page. 
 ---
 
 ## Why Static IPs?
@@ -101,7 +101,7 @@ In **Step 3**, we’ll prepare these nodes for Kubernetes by disabling swap, con
 
 ***
 
-### Resources
+## <a id="resources"></a>  Resources
 
 *   Netplan Documentation
 *   Ubuntu Networking Guide
