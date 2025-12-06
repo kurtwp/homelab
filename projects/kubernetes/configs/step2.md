@@ -104,7 +104,7 @@ In **Step 3**, we’ll prepare these nodes for Kubernetes by disabling swap, con
 ### <a id="resources"></a>  Resources
 
 *   [IP Command](https://github.com/kurtwp/homelab/blob/main/docs/linuxCommands/ip.md) Examples of using the ip command
-*   Netplan Documentation
+*   [Netplan](https://github.com/kurtwp/homelab/blob/main/docs/linuxCommands/netplan.md) Explanaion of configuring .yaml file found under netplan directory. 
 *   Ubuntu Networking Guide
 
 ***
