@@ -3,15 +3,17 @@
 | Discription      | Commnad |
 | :---             | :--- |
 | List out interfaces |  `ip a` |
-| List out        |  `nc -z <target IP> <port range>` |
+| View route entries  |  `ip route` |
 
 
 > [!Note]
-> In most cases **netcat** is interchangeable with **nc**.
+> The above command are not just for viewing but can be used to add, delete, and modify entries.
 <br>
 <p>
-  <h2>NCAT scanning examples</h2>
-  <img src="images/ncat-z.png" alt="NCAT scanning examples" width="60%">
+  <h2>IP view interface example</h2>
+  <img src="images/ipA.png" alt="NCAT scanning examples" width="60%"><br>
+  <h2>IP view route example</h2>
+  <img src="images/ipRoute.png" alt="NCAT scanning examples" width="60%">
 </p>
 
 
