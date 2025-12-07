@@ -13,7 +13,7 @@ Private Code Base
 ## 📚 Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs** and **k3s**, a lightweight Kubernetes distribution. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through networking, k3s installation, and deploying workloads.
 
-## 🧩 Repository Structure
+##  Repository Structure
 ```
 .
 ├── images/                # Screenshots, diagrams
@@ -22,18 +22,18 @@ This repository documents the process of building a small **Kubernetes cluster**
 └── README.md              # You are here
 ```
 
-## ✅ Goals
+##  Goals
 - Learn and document a reproducible home lab Kubernetes setup using k3s
 - Keep costs and power usage low using MiniPCs
 - Use Ubuntu Server LTS for stability and support
 
-## 🖥️ Hardware
+##  Hardware
 - **3× Kumrui MiniPCs** (model and specs: _add details_)
 - **Network:** Gigabit switch/router, DHCP (or static IPs)
 - **Storage:** Built-in SSDs (recommend ≥ 256 GB)
 - **USB drive:** 8 GB+ for Ubuntu installer
 
-## 🔧 Software
+##  Software
 - **OS:** Ubuntu Server **24.04.3 LTS**
 - **Tools:** Rufus (Windows) or Balena Etcher (macOS/Linux) to create boot media
 - **Kubernetes:** k3s (lightweight Kubernetes)
@@ -43,7 +43,7 @@ This repository documents the process of building a small **Kubernetes cluster**
 - Network connectivity to your LAN
 - Admin access on your workstation to create a bootable USB
 
-## 🚀 Quick Start
+##  Quick Start
 ### 1) Install Ubuntu Server on each node
 ```bash
 # Example steps (high-level)
@@ -98,33 +98,30 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<CONTROL_NODE_IP>:6443 K3S_TOKEN=
 sudo k3s kubectl get nodes
 ```
 
-## 📒 Documentation Index
+<!-- 
+##  Documentation Index
 - **Step 1:** OS install — _docs/step-01-install-ubuntu.md_
 - **Step 2:** Static IPs — _docs/step-02-static-ips.md_
 - **Step 3:** k3s setup — _docs/step-03-k3s-setup.md_
 - **Step 4:** Deploy workloads — _docs/step-04-workloads.md_
+-->
 
-## 🧪 Testing
+##  Testing
 - Ping between nodes
 - SSH into each node
 - Verify hostname, IP, and k3s cluster status
 
-## 📦 Assets
-- Thumbnail: `thumbnail_compressed.jpg` (YouTube and docs)
-- Photos: _add your setup images to `images/`_
-- Diagrams: _cluster architecture (forthcoming)_
-
-## 🏷️ Tags
+##  Tags
 Ubuntu Server, 24.04.3, Kumrui MiniPC, k3s, Kubernetes, homelab, Linux, server
 
-## 🔗 Useful Links
+##  Useful Links
 - Ubuntu Server download: https://ubuntu.com/download/server
 - k3s docs: https://docs.k3s.io/
 
-## 🤝 Contributing
+##  Contributing
 Issues and PRs are welcome! Please follow conventional commit messages and include reproducible steps.
 
-## 📄 License
+##  License
 MIT — see `LICENSE`.
 
 ---
