@@ -3,8 +3,9 @@ Private Code Base
 
 # Kubernetes Homelab on Kumrui MiniPCs (Using k3s)
 
-> **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs
-
+> **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
+> **Series — [Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
+> 
 ![Thumbnail](thumbnail_compressed.jpg)
 
 ## 📚 Project Overview
