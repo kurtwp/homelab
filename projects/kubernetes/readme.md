@@ -1,5 +1,3 @@
-Private Code Base
-
 
 # Kubernetes Home Lab on Kumrui MiniPCs (Using k3s)
 
