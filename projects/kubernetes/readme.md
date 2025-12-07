@@ -1,7 +1,7 @@
 # Kubernetes (ks3) Home Lab on Kumrui MiniPCs
 
-> **Series — Step 1:** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
-> **Series — [!Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
+> **Series — [Step 1](step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
+> **Series — [Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
 > 
 ## � Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs**. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through cluster prerequisites, Kubernetes installation, and deploying workloads.
