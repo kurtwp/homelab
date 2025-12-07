@@ -13,6 +13,8 @@ Private Code Base
 ## 📚 Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs** and **k3s**, a lightweight Kubernetes distribution. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through networking, k3s installation, and deploying workloads.
 
+[Go to Documentation](#documentation) for individual links to each step in this Kubernetes series. 
+
 ##  Repository Structure
 ```
 .
@@ -98,13 +100,14 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<CONTROL_NODE_IP>:6443 K3S_TOKEN=
 sudo k3s kubectl get nodes
 ```
 
-<!-- 
-##  Documentation Index
+
+##  <a id="documentation"></a> Documentation Index
+- **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
 - **Step 1:** OS install — _docs/step-01-install-ubuntu.md_
 - **Step 2:** Static IPs — _docs/step-02-static-ips.md_
 - **Step 3:** k3s setup — _docs/step-03-k3s-setup.md_
 - **Step 4:** Deploy workloads — _docs/step-04-workloads.md_
--->
+
 
 ##  Testing
 - Ping between nodes
