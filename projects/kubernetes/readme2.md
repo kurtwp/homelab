@@ -3,7 +3,7 @@ Private Code Base
 
 # Kubernetes Homelab on Kumrui MiniPCs (Using k3s)
 
-> **Series — Step 1:** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs
+> **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs
 
 ![Thumbnail](thumbnail_compressed.jpg)
 
@@ -16,7 +16,6 @@ This repository documents the process of building a small **Kubernetes cluster**
 ├── images/                # Screenshots, diagrams
 ├── scripts/               # Helper scripts for setup
 ├── configs/               # Netplan configs, k3s configs
-├── docs/                  # Extended guides per step
 └── README.md              # You are here
 ```
 
