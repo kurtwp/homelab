@@ -107,6 +107,7 @@ In **Step 3**, we’ll prepare these nodes for Kubernetes by disabling swap, con
 *   [Netplan](https://github.com/kurtwp/homelab/blob/main/docs/linuxCommands/netplan.md) Explainaion of configuring .yaml file found under netplan directory. 
 *   Ubuntu Networking Guide
 
+[Back](../readme.md)
 ***
 
 *Stay tuned for Step 3: Kubernetes prerequisites!*
