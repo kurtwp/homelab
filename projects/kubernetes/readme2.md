@@ -1,7 +1,7 @@
 Private Code Base
 
 
-# Kubernetes Homelab on Kumrui MiniPCs (Using k3s)
+# Kubernetes Home Lab on Kumrui MiniPCs (Using k3s)
 
 <p align="center">
   <img src="images/k3sUB.png" alt="Database Schema Diagram" width="60%">
