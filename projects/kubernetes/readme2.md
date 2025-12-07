@@ -100,12 +100,10 @@ sudo k3s kubectl get nodes
 
 
 ##  <a id="documentation"></a> Documentation Index
-- **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
- **Series — [Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
-- **Step 1:** OS install — _docs/step-01-install-ubuntu.md_
-- **Step 2:** Static IPs — _docs/step-02-static-ips.md_
-- **Step 3:** k3s setup — _docs/step-03-k3s-setup.md_
-- **Step 4:** Deploy workloads — _docs/step-04-workloads.md_
+- **[Step 1](configs/step1.md):** — Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
+- **[Step 2](configs/step2.md):** — Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
+- **Step 3:** k3s setup — Coming soon
+- **Step 4:** Deploy workloads — Coming soon
 
 
 ##  Testing
