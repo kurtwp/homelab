@@ -6,8 +6,8 @@ Private Code Base
 > **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
 > **Series — [Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
 > 
-![Thumbnail](thumbnail_compressed.jpg)
-
+![Thumbnail](images/k3sUB.png)
+<img src="images/k3sUB.png" style="width=50%"; height:auto;">
 ## 📚 Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs** and **k3s**, a lightweight Kubernetes distribution. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through networking, k3s installation, and deploying workloads.
 
