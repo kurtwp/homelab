@@ -17,6 +17,7 @@ This repository documents the process of building a small **Kubernetes cluster**
 ├── images/                # Screenshots, diagrams
 ├── scripts/               # Helper scripts for setup
 ├── configs/               # Netplan configs, k3s configs
+├── MiniPC/                # Brief overview of the MiniPC Kumrui
 └── README.md              # You are here
 ```
 
