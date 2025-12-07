@@ -8,8 +8,9 @@ Private Code Base
 > 
 ![Thumbnail](images/k3sUB.png)
 
-<img src="images/k3sUB.png" alt="image" style="width:50%"; height:auto;">
-
+<p align="center">
+  <img src="imgages/k3sUB.png" alt="Database Schema Diagram" width="60%">
+</p>
 ## 📚 Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs** and **k3s**, a lightweight Kubernetes distribution. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through networking, k3s installation, and deploying workloads.
 
