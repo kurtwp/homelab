@@ -3,14 +3,13 @@ Private Code Base
 
 # Kubernetes Homelab on Kumrui MiniPCs (Using k3s)
 
+<p align="center">
+  <img src="images/k3sUB.png" alt="Database Schema Diagram" width="60%">
+</p>
+
 > **Series — [Step 1](configs/step1.md):** Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
 > **Series — [Step 2](configs/step2.md):** Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
-> 
-![Thumbnail](images/k3sUB.png)
 
-<p align="center">
-  <img src="imgages/k3sUB.png" alt="Database Schema Diagram" width="60%">
-</p>
 ## 📚 Project Overview
 This repository documents the process of building a small **Kubernetes cluster** using **three Kumrui MiniPCs** and **k3s**, a lightweight Kubernetes distribution. The series starts with installing **Ubuntu Server 24.04.3 LTS** on each node and progresses through networking, k3s installation, and deploying workloads.
 
@@ -60,7 +59,6 @@ This repository documents the process of building a small **Kubernetes cluster**
 # Example netplan config
 network:
   version: 2
-  renderer: networkd
   ethernets:
     enp3s0:
       dhcp4: no
