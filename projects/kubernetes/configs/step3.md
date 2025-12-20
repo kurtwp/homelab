@@ -120,8 +120,7 @@ journalctl -u k3s-agent -f      # worker nodes
 
 ## Next Steps
 In **Step 4**, deploy applications.
-
-[Back](../readme.md)
 ---
+[Back](../readme.md)
 
 *Last updated: 2025-12-20*
