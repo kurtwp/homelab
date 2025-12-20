@@ -119,7 +119,7 @@ journalctl -u k3s-agent -f      # worker nodes
 ---
 
 ## Next Steps
-In **Step 4**, deploy initial workloads and explore k3s features like Traefik ingress and Helm charts.
+In **Step 4**, deploy applications.
 
 ---
 
