@@ -110,6 +110,8 @@ In **Step 3**, we’ll prepare these nodes for Kubernetes by disabling swap, con
 
 [Back](../readme.md)
 ***
+##  Tags
+Ubuntu Server, 24.04.3, Kumrui MiniPC, k3s, Kubernetes, homelab, Linux, server
 
 *Stay tuned for Step 3: Kubernetes prerequisites!*
 
