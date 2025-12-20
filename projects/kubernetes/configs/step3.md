@@ -11,7 +11,7 @@ In **Step 2**, we configured static IPs for three Kumrui MiniPCs running **Ubunt
 - **Lightweight:** Uses fewer resources than full Kubernetes.
 - **Simple:** Single-binary installation and easy node joining.
 
-> Ensure each node has a unique hostname (e.g., `node1`, `node2`, `node3`) and a static IP.
+> Ensure each node has a unique hostname (e.g., `node1`, `node2`, `node3`) and a static IPs.
 
 ---
 
@@ -56,7 +56,15 @@ Mem:            15Gi       1.2Gi        12Gi       9.8Mi       2.2Gi        14Gi
 Swap:             0B          0B          0B
 ```
 ---
-
+## Enable none sudo kubectl for your K3s user (After installing k3s on each node):
+By default, you might need sudo to run kubectl commands. To access the cluster without sudo, configure your local kubeconfig.
+```bash
+mkdir -p ~/.kube
+sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+sudo chown $USER:$USER ~/.kube/config
+# Test without sudo
+kubectl get nodes
+```
 ## Install k3s on the Control Plane (node1)
 Run on **node1**:
 ```bash
@@ -92,9 +100,9 @@ sudo k3s kubectl get nodes
 Expected output:
 ```
 NAME     STATUS   ROLES                  AGE   VERSION
-node1    Ready    control-plane,master   10m   v1.28.x+k3s
-node2    Ready    <none>                 5m    v1.28.x+k3s
-node3    Ready    <none>                 5m    v1.28.x+k3s
+node1    Ready    control-plane,master   10m   v1.33.6+k3s1
+node2    Ready    <none>                 5m    v1.33.6+k3s1
+node3    Ready    <none>                 5m    v1.33.6+k3s1
 ```
 
 ---
