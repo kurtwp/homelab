@@ -118,8 +118,11 @@ journalctl -u k3s-agent -f      # worker nodes
 ---
 
 ## Next Steps
-In **Step 4**, deploy applications.
+Step 4 deply application 
+
 ---
 [Back](../readme.md)
+##  Tags
+Ubuntu Server, 24.04.3, Kumrui MiniPC, k3s, Kubernetes, homelab, Linux, server
 
 *Last updated: 2025-12-20*
