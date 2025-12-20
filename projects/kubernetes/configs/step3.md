@@ -116,6 +116,14 @@ journalctl -u k3s-agent -f      # worker nodes
 ```
 
 ---
+## Uninstall K3s
+```bash
+On Control Plane (Master)
+sudo /usr/local/bin/k3s-uninstall.sh
+
+On Worker Nodes
+sudo /usr/local/bin/k3s-agent-uninstall.sh
+```
 
 ## Next Steps
 Step 4 deply application 
