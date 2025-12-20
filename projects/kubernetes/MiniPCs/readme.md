@@ -32,3 +32,4 @@ For worker nodes, you can save a few bucks by going with Intel N95 mini PCs that
 
 Of course, there’s also the option to buy used equipment, which can offer more powerful specs such as higher core counts or ECC memory at a similar or even lower price. However, used gear often comes with higher power consumption and potential reliability concerns. For my needs, the Kamrui E1s struck the right balance between performance, efficiency, and cost.
 
+[Back](../readme.md)
