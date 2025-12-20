@@ -8,7 +8,7 @@ In **Step 1**, we installed **Ubuntu Server 24.04.3 LTS** on three Kumrui MiniPC
 > [!Note]
 > [Go to Resorces](#resources) below for indepth information pretaiing to the commands being used on this page. 
 ---
-[![Watch on YouTube](https://img.youtube.com/vi/a4eRIG_1jfc/maxresdefault.jpg)](https://youtu.be/a4eRIG_1jfc))
+[![Watch on YouTube](https://img.youtube.com/vi/a4eRIG_1jfc/maxresdefault.jpg)](https://youtu.be/a4eRIG_1jfc)
 
 ## Why Static IPs?
 Kubernetes nodes need predictable IP addresses for:
