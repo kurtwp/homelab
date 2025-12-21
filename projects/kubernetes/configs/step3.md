@@ -61,6 +61,8 @@ By default, you might need sudo to run kubectl commands. To access the cluster w
 mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown $USER:$USER ~/.kube/config
+echo 'export KUBECONFIG=~/.kube/config'|tee -a ~/.bashrc
+source ~/.bashrc
 # Test without sudo
 kubectl get nodes
 ```
