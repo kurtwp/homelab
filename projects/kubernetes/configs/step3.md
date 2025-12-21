@@ -4,7 +4,7 @@
 In **Step 2**, we configured static IPs for three Kumrui MiniPCs running **Ubuntu Server 24.04.3 LTS**. Now, in **Step 3**, we’ll install **k3s**, a lightweight Kubernetes distribution ideal for homelabs and edge computing.
 
 ---
-[![Watch on YouTube](https://img.youtube.com/vi//aK5zw0g5I7o/maxresdefault.jpg)](https://youtu.be//aK5zw0g5I7o)
+[![Watch on YouTube](https://img.youtube.com/vi/aK5zw0g5I7o/maxresdefault.jpg)](https://youtu.be//aK5zw0g5I7o)
 
 ## Why k3s?
 - **Lightweight:** Uses fewer resources than full Kubernetes.
