@@ -1,6 +1,6 @@
 # ☸️ k3s CLI Cheat Sheet
 
-A concise reference guide for managing your Kubernetes cluster. When using these commands, remember to replace placeholders like `<ns>`, `<pod>`, and `<name>` with your actual values.
+A concise reference guide for managing your Kubernetes cluster. When using these commands, remember to replace placeholders such as `<ns>`, `<pod>`, and `<name>` with your actual values.
 
 > **Tip:** If `kubectl` isn't in your PATH on your k3s node, prepend `k3s` (e.g., `k3s kubectl get nodes`).
 
