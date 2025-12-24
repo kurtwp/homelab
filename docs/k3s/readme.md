@@ -16,7 +16,7 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 7. [Storage](#storage)
 8. [System Diagnostics](#system-diagnostics)
 9. [Namespace Quick Checks](#namespace-quick-checks)
-10. [Efficiency Tips (Aliases)](#efficiency-tips-aliases)
+10. [Efficiency Tips (Aliases)](#tips-aliases)
 
 ---
 
@@ -44,29 +44,29 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 * **Node Usage**: `kubectl top nodes` — Shows CPU/memory usage per node.
 * **Pod Usage**: `kubectl top pods -A` — Shows CPU/memory usage per pod across all namespaces.
 
-## Services and Networking
+## <a id="services-and-networking"></a> Services and Networking
 * **List Services**: `kubectl get svc -A` — Lists Services in all namespaces (ClusterIP, NodePort, LoadBalancer).
 * **Service Details**: `kubectl describe svc <svc> -n <ns>` — Detailed Service info including selectors, ports, and endpoints.
 * **Pod IPs**: `kubectl get endpoints -A` — Shows the pod IPs behind Services.
 * **Ingress**: `kubectl get ingress -A` — Lists Ingress resources (host rules and backends).
 
-## Health Probes (API Server)
+## <a id="health-probes"></a> Health Probes (API Server)
 * **Readiness**: `kubectl get --raw /readyz` — Raw readiness check of the API server (OK if ready).
 * **Liveness**: `kubectl get --raw /livez` — Raw liveness check of the API server (OK if alive).
 * **Health**: `kubectl get --raw /healthz` — General health endpoint of the API server.
 
-## Storage
+## <a id="storage"></a> Storage
 * **PVCs**: `kubectl get pvc -A` — Lists PersistentVolumeClaims across namespaces.
 * **PVs**: `kubectl get pv` — Lists PersistentVolumes available/used in the cluster.
 * **PVC Details**: `kubectl describe pvc <name> -n <ns>` — Detailed PVC info including requested size and bound PV.
 
-## System Diagnostics
+## <a id="system-diagnostics"></a> System Diagnostics
 * **Node Info**: `kubectl describe node <node>` — Detailed node info (capacity, conditions, taints).
 * **CoreDNS Placement**: `kubectl get pods -n kube-system -o wide | grep coredns` — Finds CoreDNS pods and their node placement.
 * **K3s Server Logs**: `sudo journalctl -u k3s -f` — Follows logs for the k3s server service on the control plane.
 * **K3s Agent Logs**: `sudo journalctl -u k3s-agent -f` — Follows logs for the k3s agent service on worker nodes.
 
-## Namespace Quick Checks
+## <a id="namespace-quick-checks"></a> Namespace Quick Checks
 ### MetalLB
 * **Resources**: `kubectl get pods,svc -n metallb-system`.
 * **IP Pools**: `kubectl get ipaddresspool,l2advertisement -n metallb-system`.
@@ -77,7 +77,7 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 * **Resources**: `kubectl get pods,svc,pvc -n adguard`.
 * **LB Service**: `kubectl get svc adguard-lb -n adguard -o wide` — Shows the external IP assigned by MetalLB.
 
-## Efficiency Tips (Aliases)
+## <a id="tips-aliases"></a> Efficiency Tips (Aliases)
 Add these to your `~/.bashrc` or `~/.zshrc` file to speed up your workflow:
 
 ```bash
