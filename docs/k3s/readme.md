@@ -20,13 +20,13 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 
 ---
 
-## <a id="basics"></a> Documentation IndexBasics
+## <a id="basics"></a> Basics
 * **Cluster Info**: `kubectl cluster-info` — Shows control plane endpoints and basic cluster info.
 * **Version**: `kubectl version --short` — Prints client/server Kubernetes versions in short form.
 * **Node Details**: `kubectl get nodes -o wide` — Lists nodes with extra details like IP, OS, kernel, and roles.
 * **Namespaces**: `kubectl get ns` — Lists all namespaces.
 
-## Workloads and Status
+## <a id="workloads-and-statu"></a> Workloads and Status
 * **All Pods**: `kubectl get pods -A` — Lists all pods across all namespaces.
 * **System Pods**: `kubectl get pods -n kube-system -o wide` — Lists kube-system pods with node IP and name.
 * **Resources**: `kubectl get deploy,ds,sts -A` — Lists Deployments, DaemonSets, and StatefulSets across all namespaces.
@@ -34,13 +34,13 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 * **Rollout Status**: `kubectl rollout status deploy/<name> -n <ns>` — Watches rollout progress until completion or failure.
 * **Recent Events**: `kubectl get events -A --sort-by=.lastTimestamp` — Shows recent cluster events ordered by time.
 
-## Logs and Debugging
+## <a id="logs-and-debugging"></a> Logs and Debugging
 * **Standard Logs**: `kubectl logs <pod> -n <ns>` — Prints logs from the first container in a pod.
 * **Stream Logs**: `kubectl logs -f <pod> -n <ns>` — Streams logs (follow) for live troubleshooting.
 * **Specific Container**: `kubectl logs <pod> -n <ns> -c <container>` — Gets logs from a specific container in a multi-container pod.
 * **Interactive Shell**: `kubectl exec -it <pod> -n <ns> -- sh` — Opens an interactive shell inside the container.
 
-## Resource Usage (metrics-server)
+## <a id="resources-usage"></a> Resource Usage (metrics-server)
 * **Node Usage**: `kubectl top nodes` — Shows CPU/memory usage per node.
 * **Pod Usage**: `kubectl top pods -A` — Shows CPU/memory usage per pod across all namespaces.
 
