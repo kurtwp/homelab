@@ -36,7 +36,7 @@ A reference guide for managing your Kubernetes cluster. When using these command
 
 ## <a id="logs-and-debugging"></a> Logs and Debugging
 * **Standard Logs**: `kubectl logs <pod> -n <ns>` — Prints logs from the first container in a pod.
-* **Stream Logs**: `kubectl logs -f <pod> -n <ns>` — Streams logs (follow) for live troubleshooting.
+* **Stream Logs**: `kubectl logs -f <pod> -n <ns>` — Streams logs for live troubleshooting.
 * **Specific Container**: `kubectl logs <pod> -n <ns> -c <container>` — Gets logs from a specific container in a multi-container pod.
 * **Interactive Shell**: `kubectl exec -it <pod> -n <ns> -- sh` — Opens an interactive shell inside the container.
 
