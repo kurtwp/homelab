@@ -26,7 +26,7 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 * **Node Details**: `kubectl get nodes -o wide` — Lists nodes with extra details like IP, OS, kernel, and roles.
 * **Namespaces**: `kubectl get ns` — Lists all namespaces.
 
-## <a id="workloads-and-statu"></a> Workloads and Status
+## <a id="workloads-and-status"></a> Workloads and Status
 * **All Pods**: `kubectl get pods -A` — Lists all pods across all namespaces.
 * **System Pods**: `kubectl get pods -n kube-system -o wide` — Lists kube-system pods with node IP and name.
 * **Resources**: `kubectl get deploy,ds,sts -A` — Lists Deployments, DaemonSets, and StatefulSets across all namespaces.
@@ -40,7 +40,7 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 * **Specific Container**: `kubectl logs <pod> -n <ns> -c <container>` — Gets logs from a specific container in a multi-container pod.
 * **Interactive Shell**: `kubectl exec -it <pod> -n <ns> -- sh` — Opens an interactive shell inside the container.
 
-## <a id="resources-usage"></a> Resource Usage (metrics-server)
+## <a id="resource-usage"></a> Resource Usage (metrics-server)
 * **Node Usage**: `kubectl top nodes` — Shows CPU/memory usage per node.
 * **Pod Usage**: `kubectl top pods -A` — Shows CPU/memory usage per pod across all namespaces.
 
