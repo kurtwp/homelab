@@ -20,7 +20,7 @@ A concise reference guide for managing your Kubernetes cluster. When using these
 
 ---
 
-## Basics
+## <a id="basics"></a> Documentation IndexBasics
 * **Cluster Info**: `kubectl cluster-info` — Shows control plane endpoints and basic cluster info.
 * **Version**: `kubectl version --short` — Prints client/server Kubernetes versions in short form.
 * **Node Details**: `kubectl get nodes -o wide` — Lists nodes with extra details like IP, OS, kernel, and roles.
