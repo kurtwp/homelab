@@ -52,7 +52,20 @@ TEST SUITE: None
 NOTES:
 traefik with docker.io/traefik:v3.6.5 has been deployed successfully on traefik namespace!
 
-kubectl annotate service traefik -n kube-system metallb.universe.tf/address-pool=general-pool --overwrite  # WIll force traefix to use the range of IP. 
+traefik with docker.io/traefik:v3.6.5 has been deployed successfully on traefik namespace!
+kub@kubcontrol:~/.kube$ kubectl get svc -n traefik
+NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                      AGE
+traefik   LoadBalancer   10.43.41.48   192.168.2.53   80:31325/TCP,443:31885/TCP   95s
+kub@kubcontrol:~/.kube$
+
+# WIll force traefix to use the range of IP.
+kubectl annotate service traefik -n traefik metallb.universe.tf/address-pool=general-pool --overwrite
+kub@kubcontrol:~/.kube$ kubectl get svc -n traefik
+NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                      AGE
+traefik   LoadBalancer   10.43.41.48   192.168.2.20   80:31325/TCP,443:31885/TCP   5m37s
+kub@kubcontrol:~/.kube$
+kubctl apply -f dashbraod.yaml
+
 ```
 
 ## MetalLB .yaml file
