@@ -68,6 +68,16 @@ kubctl apply -f dashbraod.yaml
 
 ```
 
+## Update /etc/hosts file
+```bash
+192.168.2.20 traefik.home.arpa
+```
+
+## Access Traefik
+```bash
+http://traefik.home.arpa
+```
+
 ## MetalLB .yaml file
 ```bash
 Version: metallb.io/v1beta1
