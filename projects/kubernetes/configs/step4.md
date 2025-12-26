@@ -13,6 +13,32 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm repo add metallb https://metallb.github.io/metallb
 helm repo update
 helm install metallb metallb/metallb --namespace metallb-system --create-namespace
+
+kubectl apply -f metallb-config.yaml
+kubectl get pods -n metallb-system
+kubectl get ipaddresspool -n metallb-system
+kubectl get l2advertisement -n metallb-system
+```
+
+## Test MetaLB
+```bash
+kubectl create deployment web-test --image=nginx
+kubectl expose deployment web-test --port=80 --type=LoadBalancer
+kubectl get svc web-test
+kubectl delete service web-test
+kubectl delete deployment web-test
+kubectl get svc web-test
+
+```
+
+## Install Traefix 
+```bash
+helm repo add traefik https://traefik.github.io/charts
+helm repo update
+helm install traefik traefik/traefik   --namespace kube-system   --set service.type=LoadBalancer
+kubectl get svc -n kube-system
+
+kubectl annotate service traefik -n kube-system metallb.universe.tf/address-pool=general-pool --overwrite  # WIll force traefix to use the range of IP. 
 ```
 
 ## MetalLB .yaml file
