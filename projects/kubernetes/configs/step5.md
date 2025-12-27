@@ -1,1 +1,1 @@
-# Setting up Adgusrd
+# Setting up Adguard
