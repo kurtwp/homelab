@@ -8,7 +8,20 @@ Before you apply this, run these two commands on your Ubuntu terminal to make su
 ```bash
 sudo mkdir -p /var/lib/adguard/work /var/lib/adguard/conf
 sudo chmod -R 777 /var/lib/adguard
-
+```
+## Apply adguard.yaml
+```bash
+kubectl get svc -n adguard
+```
+## Confirm Adguard
+```bash
+kub@kubcontrol:~/.kube$ kubectl get pods -n adguard
+NAME                            READY   STATUS    RESTARTS   AGE
+adguard-home-76db99587d-ln6cz   1/1     Running   0          20s
+kub@kubcontrol:~/.kube$ kubectl get svc -n adguard
+NAME           TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                                    AGE
+adguard-home   LoadBalancer   10.43.81.117   192.168.2.53   3000:30408/TCP,53:31592/TCP,53:31592/UDP   10m
+kub@kubcontrol:~/.kube$
 ```
 ## Adguard yaml
 ```bash
