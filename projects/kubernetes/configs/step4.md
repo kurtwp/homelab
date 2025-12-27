@@ -98,7 +98,7 @@ http://traefik.home.arpa
 
 ## MetalLB .yaml file
 ```bash
-Version: metallb.io/v1beta1
+apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: general-pool
