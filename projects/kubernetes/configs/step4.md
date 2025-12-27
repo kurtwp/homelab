@@ -1,5 +1,9 @@
 # Step 4: Installing MetalLB k3s on Kumrui MiniPCs
  curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable traefik --disable servicelb" sh -
+ ### confirm serviceLB disabled
+ ```bash
+kubectl get pods -n kube-system | grep svclb
+```
 ```bash
 mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
@@ -7,9 +11,13 @@ sudo chown $(id -u):$(id -g) ~/.kube/config
 chmod 600 ~/.kube/config
 export KUBECONFIG=~/.kube/config
 echo "export KUBECONFIG=~/.kube/config" >> ~/.bashrc
-
+```
+### Install helm
+```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
+```
+### Install MetalLB
+```bash
 helm repo add metallb https://metallb.github.io/metallb
 helm repo update
 helm install metallb metallb/metallb --namespace metallb-system --create-namespace
@@ -17,6 +25,8 @@ helm install metallb metallb/metallb --namespace metallb-system --create-namespa
 kubectl apply -f metallb-config.yaml
 kubectl get pods -n metallb-system
 kubectl get ipaddresspool -n metallb-system
+kubectl get l2advertisement -n metallb-system
+kubectl get ipaddresspool -n metallb-system general-pool -o yaml
 kubectl get l2advertisement -n metallb-system
 ```
 
