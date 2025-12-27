@@ -2,9 +2,10 @@
 ## create namespace:
 ```bash
 kubectl create namespace adguard --dry-run=client -o yaml | kubectl apply -f -
+```
 
-
-
+Before you apply this, run these two commands on your Ubuntu terminal to make sure the folders exist and the Kubernetes pod is allowed to write to them:
+```bash
 sudo mkdir -p /var/lib/adguard/work /var/lib/adguard/conf
 sudo chmod -R 777 /var/lib/adguard
 
