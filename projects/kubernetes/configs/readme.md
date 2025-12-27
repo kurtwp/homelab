@@ -8,3 +8,4 @@
 - **[Step 2](step2.md):** — Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
 - **[Step 3](step3.md):** — Installing K3s
 - **Step 4:** — Coming soon
+- **Step 5:** — Coming soon
