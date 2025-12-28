@@ -102,7 +102,7 @@ sudo k3s kubectl get nodes
 - **[Step 1](configs/step1.md):** — Install Ubuntu Server 24.04.3 on three Kumrui MiniPCs<br>
 - **[Step 2](configs/step2.md):** — Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
 - **[Step 3](configs/step3.md):** — Installing K3s
-- **Step 4:** Deploy workloads — Coming soon
+- **[Step 4](configs/step4.md):** — Installing MetalLB
 
 
 ##  Testing
