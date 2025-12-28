@@ -46,7 +46,10 @@ After the command issues above Traefix will be assigned a IP from the pool as sh
    kub@kubcontrol:~/.kube$
 ```
 ## Configuration — Expose Traefik Dashboard
-Create `dashboard.yaml`:
+Create `dashboard.yaml`:  
+> [!Note]
+>  will illustrate the steps needed to install reinstall **Traefik**.
+---
 ```yaml
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
