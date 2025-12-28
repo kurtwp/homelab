@@ -1,6 +1,8 @@
 # Setting up Adguard
 ## Adguard DNS List:
 https://adguard-dns.io/kb/general/dns-providers
+## Adguard Knowledge Base:
+https://adguard-dns.io/kb/
 ## create namespace:
 ```bash
 kubectl create namespace adguard --dry-run=client -o yaml | kubectl apply -f -
