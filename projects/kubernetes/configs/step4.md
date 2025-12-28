@@ -116,6 +116,45 @@ kubectl get l2advertisement -n metallb-system
 ```
 
 ***
+## ✅ Step 5: Test MetalLB With a Sample Deployment
+
+Create a simple NGINX deployment and expose it as a LoadBalancer:
+
+```bash
+kubectl create deployment web-test --image=nginx
+kubectl expose deployment web-test --port=80 --type=LoadBalancer
+```
+
+Check the service:
+
+```bash
+kubectl get svc web-test
+```
+
+You should see an **EXTERNAL-IP** assigned from your configured pool (e.g., `192.168.2.49`).
+
+Finally, clean up:
+
+```bash
+kubectl delete service web-test
+kubectl delete deployment web-test
+```
+
+***
+
+## ✅ Common Pitfalls
+
+*   **apiVersion errors**: Ensure each resource in `metallb-config.yaml` starts with `apiVersion: metallb.io/v1beta1`.
+*   **IP ranges**: Use valid ranges or CIDR notation.
+*   **Helm re-installation errors**: If you see `cannot re-use a name that is still in use`, the release already exists—use `helm uninstall metallb` before reinstalling.
+
+***
+
+### � Conclusion
+
+With MetalLB configured, your bare-metal Kubernetes cluster can now assign external IPs to services, making it easier to expose workloads without relying on NodePorts or manual ingress setups.
+
+***
 
 ```bash 
 kubectl apply -f metallb-config.yaml
