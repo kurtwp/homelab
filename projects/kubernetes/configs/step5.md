@@ -28,10 +28,10 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    You should see an IP address assigned to Traefix as depicted below:
    
    ```bash
-   kub@control:~/.kube$ kubectl get svc -n traefik
-   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                                     AGE
-   traefik   LoadBalancer   10.43.45.53   192.168.2.53   80:30784/TCP,443:30615/TCP,8080:30419/TCP   22h
-   kub@control:~/.kube$
+   kub@kubcontrol:~/.kube$ kubectl get svc -n traefik
+   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                      AGE
+   traefik   LoadBalancer   10.43.41.48   192.168.2.53   80:31325/TCP,443:31885/TCP   95s
+   kub@kubcontrol:~/.kube$
    ```
    
 4. (Optional) Pin Traefik to a specific MetalLB pool:
@@ -40,10 +40,10 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    ```
 After the command issues above Traefix will be assigned a IP from the pool as shown below: 
 ```bash
-   kub@control:~/.kube$ kubectl get svc -n traefik
-   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                                     AGE
-   traefik   LoadBalancer   10.43.45.53   192.168.2.20   80:30784/TCP,443:30615/TCP,8080:30419/TCP   22h
-   kub@control:~/.kube$
+   kub@kubcontrol:~/.kube$ kubectl get svc -n traefik
+   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                      AGE
+   traefik   LoadBalancer   10.43.41.48   192.168.2.20   80:31325/TCP,443:31885/TCP   5m37s
+   kub@kubcontrol:~/.kube$
 ```
 ## Configuration — Expose Traefik Dashboard
 Create `dashboard.yaml`:
@@ -68,12 +68,10 @@ Apply it:
 kubectl apply -f dashboard.yaml
 ```
 
-![Dashboard Flow](images/dashboard-flow.png)
-
 ## Testing
 Open the dashboard in your browser using the MetalLB external IP or DNS:
 ```
-http://192.168.2.40/dashboard/
+http://192.168.2.20/dashboard/
 ```
 If you configured DNS, use:
 ```
@@ -81,7 +79,7 @@ http://traefik.home.lan/dashboard/
 ```
 
 ## Common Pitfalls
-- **Typos**: Use `kubectl`, not `kubctl`. Ensure file names like `dashboard.yaml` are correct.
+
 - **Annotations**: If the external IP doesn’t change, verify your MetalLB pools and L2Advertisement.
 - **EntryPoints**: The dashboard IngressRoute uses `web` (HTTP). If using TLS, add `websecure` and certificates.
 
@@ -89,7 +87,6 @@ http://traefik.home.lan/dashboard/
 With Traefik and MetalLB, bare‑metal K3s clusters get production‑style ingress and external IPs. Maintain least privilege and secure access to the dashboard in non‑lab environments.
 
 ---
-*This README was generated from the commands seen in `traefik.txt`.*
 
 
 
