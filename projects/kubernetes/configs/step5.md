@@ -82,8 +82,8 @@ kubectl apply -f dashboard.yaml
 ## Testing
 Open the dashboard in your browser using the MetalLB external IP or DNS:
 > [!Note]
->  Make sure you add the closing "/" to the end of dashboard. If not access to
-> Traefik will bw denied.  
+>  Make sure you add the closing "/" to the end of dashboard. If not, access to
+> Traefik will be denied.  
 ```
 http://192.168.2.20/dashboard/
 ```
