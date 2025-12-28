@@ -104,6 +104,18 @@ spec:
   - general-pool
   - adguard-pool
 ```
+Apply the configuration:
+```bash
+kubectl apply -f metallb-config.yaml
+```
+Verify resources:
+
+```bash
+kubectl get ipaddresspool -n metallb-system
+kubectl get l2advertisement -n metallb-system
+```
+
+***
 
 ```bash 
 kubectl apply -f metallb-config.yaml
