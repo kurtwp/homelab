@@ -25,6 +25,15 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    kubectl get svc -n traefik
    # Expect: TYPE LoadBalancer, External IP from MetalLB
    ```
+   You should see an IP address assigned to Traefix as depicted below:
+   
+   ```bash
+   kub@control:~/.kube$ kubectl get svc -n traefik
+   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                                     AGE
+   traefik   LoadBalancer   10.43.45.53   192.168.2.53   80:30784/TCP,443:30615/TCP,8080:30419/TCP   22h
+   kub@control:~/.kube$
+   ```
+   
 4. (Optional) Pin Traefik to a specific MetalLB pool:
    ```bash
    kubectl annotate service traefik -n traefik metallb.universe.tf/address-pool=general-pool --overwrite
