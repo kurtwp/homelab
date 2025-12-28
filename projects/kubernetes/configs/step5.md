@@ -106,5 +106,3 @@ With Traefik and MetalLB, bare‑metal K3s clusters get production‑style ingre
 [Back](../readme.md)
 
 
-
-```
