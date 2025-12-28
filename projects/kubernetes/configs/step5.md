@@ -1,3 +1,88 @@
+
+# Step 5: Installing Traefik k3s on Kumrui MiniPCs
+
+## Introduction
+Traefik is a modern, cloud-native reverse proxy and ingress controller. This guide shows how to install Traefik via Helm on a K3s cluster, assign an external IP with MetalLB, and expose the Traefik dashboard.
+
+## Prerequisites
+- Kubernetes (K3s) cluster with `kubectl` configured.
+- Helm 3 installed.
+- MetalLB installed and configured with an `IPAddressPool` (e.g., `general-pool`).
+
+## Installation Steps
+1. Add the Traefik chart repository and update:
+   ```bash
+   helm repo add traefik https://traefik.github.io/charts
+   helm repo update
+   ```
+2. Create the `traefik` namespace and install Traefik:
+   ```bash
+   kubectl create namespace traefik
+   helm install traefik traefik/traefik --namespace traefik
+   ```
+3. Check the service:
+   ```bash
+   kubectl get svc -n traefik
+   # Expect: TYPE LoadBalancer, External IP from MetalLB
+   ```
+4. (Optional) Pin Traefik to a specific MetalLB pool:
+   ```bash
+   kubectl annotate service traefik -n traefik metallb.universe.tf/address-pool=general-pool --overwrite
+   ```
+
+## Configuration — Expose Traefik Dashboard
+Create `dashboard.yaml`:
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard
+  namespace: traefik
+spec:
+  entryPoints:
+  - web
+  routes:
+  - match: Host(`traefik.home.lan`) && (PathPrefix(`/dashboard`)     || PathPrefix(`/api`))
+    kind: Rule
+    services:
+    - name: api@internal
+      kind: TraefikService
+```
+Apply it:
+```bash
+kubectl apply -f dashboard.yaml
+```
+
+![Dashboard Flow](images/dashboard-flow.png)
+
+## Testing
+Open the dashboard in your browser using the MetalLB external IP or DNS:
+```
+http://192.168.2.40/dashboard/
+```
+If you configured DNS, use:
+```
+http://traefik.home.lan/dashboard/
+```
+
+## Common Pitfalls
+- **Typos**: Use `kubectl`, not `kubctl`. Ensure file names like `dashboard.yaml` are correct.
+- **Annotations**: If the external IP doesn’t change, verify your MetalLB pools and L2Advertisement.
+- **EntryPoints**: The dashboard IngressRoute uses `web` (HTTP). If using TLS, add `websecure` and certificates.
+
+## Conclusion
+With Traefik and MetalLB, bare‑metal K3s clusters get production‑style ingress and external IPs. Maintain least privilege and secure access to the dashboard in non‑lab environments.
+
+---
+*This README was generated from the commands seen in `traefik.txt`.*
+
+
+
+
+
+
+
+***
 ## Install Traefix 
 ```bash
 kub@kubcontrol:~/.kube$ helm repo add traefik https://traefik.github.io/charts
