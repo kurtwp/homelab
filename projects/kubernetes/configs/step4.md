@@ -72,6 +72,39 @@ metallb-speaker-fhpb8                 4/4     Running   8 (18h ago)   20h
 ```
 ***
 
+## ✅ Step 4: Configure IP Address Pools and L2 Advertisement
+
+Create a configuration file `metallb-config.yaml`:
+```yaml
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: general-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.2.20-192.168.2.29
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: adguard-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.2.53/32  # Specifically for AdGuard
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: l2-advert
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - general-pool
+  - adguard-pool
+```
+
 ```bash 
 kubectl apply -f metallb-config.yaml
 kubectl get pods -n metallb-system
@@ -140,35 +173,7 @@ http://traefik.home.arpa
 ```
 
 ## MetalLB .yaml file
-```bash
-apiVersion: metallb.io/v1beta1
-kind: IPAddressPool
-metadata:
-  name: general-pool
-  namespace: metallb-system
-spec:
-  addresses:
-  - 192.168.2.20-192.168.2.29
----
-apiVersion: metallb.io/v1beta1
-kind: IPAddressPool
-metadata:
-  name: adguard-pool
-  namespace: metallb-system
-spec:
-  addresses:
-  - 192.168.2.53/32  # Specifically for AdGuard
----
-apiVersion: metallb.io/v1beta1
-kind: L2Advertisement
-metadata:
-  name: l2-advert
-  namespace: metallb-system
-spec:
-  ipAddressPools:
-  - general-pool
-  - adguard-pool
-```
+
 ## Traefik dashbroad.yaml
 ```bash
 apiVersion: traefik.io/v1alpha1
