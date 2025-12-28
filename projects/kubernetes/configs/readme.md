@@ -9,3 +9,4 @@
 - **[Step 3](step3.md):** — Installing K3s
 - **Step 4:** — Coming soon
 - **Step 5:** — Coming soon
+- **Step 6:** — Coming soon
