@@ -9,12 +9,20 @@ MetalLB is a load balancer implementation for bare-metal Kubernetes clusters. If
 </p>
 
 
-### K3s install command
- curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable traefik --disable servicelb" sh -
- ### confirm serviceLB disabled
+## ✅ Step 1: Install K3s Without Traefik and ServiceLB
+
+Start by installing K3s, disabling the default Traefik and ServiceLB components:
+
+```bash
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable traefik --disable servicelb" sh -
+```
+
+ ###v Confirm ServiceLB disabled
  ```bash
 kubectl get pods -n kube-system | grep svclb
 ```
+After installation, configure `kubectl`:
+
 ```bash
 mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
@@ -23,6 +31,14 @@ chmod 600 ~/.kube/config
 export KUBECONFIG=~/.kube/config
 echo "export KUBECONFIG=~/.kube/config" >> ~/.bashrc
 ```
+### Verify your node:
+
+```bash
+kubectl get node  # Will return nothing
+```
+
+***
+
 ### Install helm
 ```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
