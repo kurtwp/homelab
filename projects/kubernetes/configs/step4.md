@@ -39,16 +39,40 @@ kubectl get node  # Will return nothing
 
 ***
 
-### Install helm
+## ✅ Step 2: Install Helm
+MetalLB is deployed via Helm, so install Helm first:
+
 ```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
-### Install MetalLB
+
+***
+
+## ✅ Step 3: Add MetalLB Helm Repository and Install
+
+Add the MetalLB chart repository and install MetalLB in its own namespace:
+
 ```bash
 helm repo add metallb https://metallb.github.io/metallb
 helm repo update
 helm install metallb metallb/metallb --namespace metallb-system --create-namespace
+```
 
+Check that the pods are running:
+
+```bash
+kubectl get pods -n metallb-system
+```
+You should see `metallb-controller` and `metallb-speaker` in `Running` state.
+```bash
+kub@control:~$ kubectl get pods -n metallb-system
+NAME                                  READY   STATUS    RESTARTS      AGE
+metallb-controller-7bd5848b94-vz5q8   1/1     Running   2 (18h ago)   20h
+metallb-speaker-fhpb8                 4/4     Running   8 (18h ago)   20h
+```
+***
+
+```bash 
 kubectl apply -f metallb-config.yaml
 kubectl get pods -n metallb-system
 kubectl get ipaddresspool -n metallb-system
