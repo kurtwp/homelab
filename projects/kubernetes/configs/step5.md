@@ -48,7 +48,9 @@ After the command issues above Traefix will be assigned a IP from the pool as sh
 ## Configuration — Expose Traefik Dashboard
 Create `dashboard.yaml`:  
 > [!Note]
->  will illustrate the steps needed to install reinstall **Traefik**.
+>  Notice in the .yaml file that a domain (traefik.home.arpa) name is being used instead of an IP address.
+> This was done on purpose as in Step 6, Adguard will be installed.  Therefor to access Traefik dashboard you will
+> need to add the IP address plus the FQDN in your hosts file.   
 ---
 ```yaml
 apiVersion: traefik.io/v1alpha1
@@ -70,15 +72,22 @@ Apply it:
 ```bash
 kubectl apply -f dashboard.yaml
 ```
-
+## Update /etc/hosts file
+```bash
+192.168.2.20 traefik.home.arpa
+```
 ## Testing
 Open the dashboard in your browser using the MetalLB external IP or DNS:
+> [!Note]
+>  Make sure you add the closing "/" to the end of dashboard. If not access to
+> Traefik will bw denied.  
 ```
 http://192.168.2.20/dashboard/
 ```
 If you configured DNS, use:
+
 ```
-http://traefik.home.lan/dashboard/
+http://traefik.home.arpa/dashboard/
 ```
 
 ## Common Pitfalls
