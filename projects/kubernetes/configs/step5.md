@@ -72,10 +72,13 @@ Apply it:
 ```bash
 kubectl apply -f dashboard.yaml
 ```
-## Update /etc/hosts file
+## Update hosts file on Linux or Windows
 ```bash
 192.168.2.20 traefik.home.arpa
 ```
+#### For Linux the hosts file can be found, in most cases, under /etc
+#### For Windows 11 the hosts file is usally found under C:\Windoews\System32\drivers\etc\
+
 ## Testing
 Open the dashboard in your browser using the MetalLB external IP or DNS:
 > [!Note]
