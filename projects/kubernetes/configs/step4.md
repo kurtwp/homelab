@@ -85,7 +85,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.2.20-192.168.2.29
+  - 192.168.2.20-192.168.2.29  #Update with your IP range
 ---
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
@@ -94,7 +94,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.2.53/32  # Specifically for AdGuard
+  - 192.168.2.53/32  # Specifically for AdGuard Update with your IP
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -133,7 +133,7 @@ Check the service:
 kubectl get svc web-test
 ```
 
-You should see an **EXTERNAL-IP** assigned from your configured pool (e.g., `192.168.2.49`).
+You should see an **EXTERNAL-IP** assigned from your configured pool (e.g., `192.168.2.53`).
 
 Finally, clean up:
 
@@ -147,17 +147,19 @@ kubectl delete deployment web-test
 ## ✅ Common Pitfalls
 
 *   **apiVersion errors**: Ensure each resource in `metallb-config.yaml` starts with `apiVersion: metallb.io/v1beta1`.
-*   **IP ranges**: Use valid ranges or CIDR notation.
+*   **IP ranges**: Use valid ranges.
 *   **Helm re-installation errors**: If you see `cannot re-use a name that is still in use`, the release already exists—use `helm uninstall metallb` before reinstalling.
 
 ***
 
-### � Conclusion
+## � Conclusion
 
 With MetalLB configured, your bare-metal Kubernetes cluster can now assign external IPs to services, making it easier to expose workloads without relying on NodePorts or manual ingress setups.
 
 ***
+[Back](../readme.md)
 
+## Additional Commands
 ```bash 
 kubectl apply -f metallb-config.yaml
 kubectl get pods -n metallb-system
