@@ -10,6 +10,7 @@ MetalLB is a load balancer implementation for bare-metal Kubernetes clusters. If
  <strong>MetalLB</strong> acts as a more advanced alternative to ServiceLB by functioning as a dedicated network load balancer that manages a pool of distinct IP addresses. Instead of relying on your cluster's node IPs, MetalLB uses its "Speaker" pods to assign unique virtual IPs to your local network using standard protocols. This allows every service, such as Traefik, Adguard, to have its own dedicated IP address while still using common ports as 80 or 443, effectively mimicking how load balancers behave in a cloud environment. While it requires manual configuration through <strong>IPAddressPools</strong> and <strong>L2Advertisements</strong>, it eliminates the port conflicts inherent in ServiceLB and provides a cleaner, more scalable way to expose services to your local network.
 </p>
 
+[![Watch on YouTube](https://img.youtube.com/vi/uDBpPI_tz4Q/maxresdefault.jpg)](https://youtu.be//uDBpPI_tz4Q)
 
 ## ✅ Step 1: Install K3s Without Traefik and ServiceLB
 
