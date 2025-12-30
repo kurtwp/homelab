@@ -93,11 +93,6 @@ If you configured DNS, use:
 http://traefik.home.arpa/dashboard/
 ```
 
-## Common Pitfalls
-
-- **Annotations**: If the external IP doesn’t change, verify your MetalLB pools and L2Advertisement.
-- **EntryPoints**: The dashboard IngressRoute uses `web` (HTTP). If using TLS, add `websecure` and certificates.
-
 ## Conclusion
 With Traefik and MetalLB, bare‑metal K3s clusters get production‑style ingress and external IPs. Maintain least privilege and secure access to the dashboard in non‑lab environments.
 
