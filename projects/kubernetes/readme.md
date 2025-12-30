@@ -103,6 +103,7 @@ sudo k3s kubectl get nodes
 - **[Step 2](configs/step2.md):** — Adding Static IPs to Ubuntu Server on Kumrui MiniPCs
 - **[Step 3](configs/step3.md):** — Installing K3s
 - **[Step 4](configs/step4.md):** — Installing MetalLB
+- **[Step 5](configs/step5.md):** — Installing Traefik
 
 
 ##  Testing
