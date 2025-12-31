@@ -164,8 +164,3 @@ You now have AdGuard Home running on Kubernetes with a static external IP provid
 ***
 [Back](../readme.md)
 
-
-
-
-          type: DirectoryOrCreate
-```
