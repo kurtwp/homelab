@@ -104,6 +104,7 @@ sudo k3s kubectl get nodes
 - **[Step 3](configs/step3.md):** — Installing K3s
 - **[Step 4](configs/step4.md):** — Installing MetalLB
 - **[Step 5](configs/step5.md):** — Installing Traefik
+- **[Step 6](configs/step6.md):** — Installing Adguard
 
 
 ##  Testing
