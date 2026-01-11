@@ -7,6 +7,8 @@ AdGuard Home is a network-wide ad blocker and DNS filtering solution. This guide
 https://adguard-dns.io/kb/general/dns-providers
 ## Adguard Knowledge Base:
 https://adguard-dns.io/kb/
+## home.arpa RFC 8375
+https://www.rfc-editor.org/rfc/rfc8375.html
 
 ***
 
