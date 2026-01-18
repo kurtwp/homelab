@@ -17,7 +17,10 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    ```
 2. Create the `uptime kuma` namespace and install Uptime Kuma:
 ```bash
-   helm install uptime-kuma uptime-kuma\uptime-kuma --namespace monitoring --creat-namespace
+  helm upgrade --install uptime-kuma uptime-kuma/uptime-kuma \
+  --namespace monitoring \
+  --create-namespace \
+  -f kuma-values.yaml
    ```
 3. Create kuma-values.yaml:  
 
