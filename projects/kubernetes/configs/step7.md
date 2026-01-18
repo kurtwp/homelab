@@ -15,14 +15,7 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    helm repo add uptime-kuma https://helm.irsigler.cloud
    helm repo update
    ```
-2. Create the `uptime kuma` namespace and install Uptime Kuma:
-```bash
-  helm upgrade --install uptime-kuma uptime-kuma/uptime-kuma \
-  --namespace monitoring \
-  --create-namespace \
-  -f kuma-values.yaml
-   ```
-3. Create kuma-values.yaml:  
+2. Create kuma-values.yaml:  
 
 ```yaml
 ## Use local-path storage (default in K3s)
@@ -40,30 +33,49 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
 ```
-Apply it:
-```bash
-kubectl apply -f kuma-values.yaml
-```
    ```bash
-  
+3. Create the `uptime kuma` namespace and install Uptime Kuma:
+```bash
+  helm upgrade --install uptime-kuma uptime-kuma/uptime-kuma \
+  --namespace monitoring \
+  --create-namespace \
+  -f kuma-values.yaml
+   ```  
 4. Check the service:
    ```bash
    kubectl get pods -n monitoring
+      NAME                           READY   STATUS    RESTARTS   AGE
+      uptime-kuma-678978b8d9-sm68m   1/1     Running   0          17m
+
    kubectl get svc -n monitoring
-  
-   ```
-   You should see an IP address assigned to Traefix as depicted below:
-   
-   ```bash
-   kub@kubcontrol:~/.kube$ kubectl get svc -n traefik
-   NAME      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)                      AGE
-   traefik   LoadBalancer   10.43.41.48   192.168.2.53   80:31325/TCP,443:31885/TCP   95s
-   kub@kubcontrol:~/.kube$
+      NAME          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+      uptime-kuma   ClusterIP   10.43.183.79   <none>        3001/TCP   17m
+
    ```
    
-5. (Optional) Pin Traefik to a specific MetalLB pool:
-   ```bash
-   kubectl annotate service traefik -n traefik metallb.universe.tf/address-pool=general-pool --overwrite
+5. Expose Uptime Kuma using Traefik Ingress:
+   ```yaml
+   apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: uptime-kuma
+  namespace: monitoring
+  annotations:
+    # This tells the K3s Traefik controller to pick up this rule
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: uptime.home.lan
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: uptime-kuma
+            port:
+              number: 3001
+
    ```
 After the command issues above Traefix will be assigned a IP from the pool as shown below: 
 ```bash
