@@ -12,7 +12,7 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
 ## Installation Steps
 1. Add the Traefik chart repository and update:
    ```bash
-   helm repo add traefik https://traefik.github.io/charts
+   helm repo add uptime-kuma https://helm.irsigler.cloud
    helm repo update
    ```
 2. Create the `traefik` namespace and install Traefik:
