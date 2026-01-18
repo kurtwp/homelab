@@ -15,12 +15,36 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    helm repo add uptime-kuma https://helm.irsigler.cloud
    helm repo update
    ```
-2. Create the `uptime kuma` namespace and install Traefik:
+2. Create the `uptime kuma` namespace and install Uptime Kuma:
+Create `kuma-values.yaml`:  
+> [!Note]
+>  
+---
+```yaml
+## Use local-path storage (default in K3s)
+storage:
+  enabled: true
+  storageClassName: local-path
+  size: 2Gi
+
+ingress:
+  enabled: true
+  className: traefik
+  hosts:
+    - host: uptime.home.arpa  # <--- Change this to your preferred local domain
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+```
+Apply it:
+```bash
+kubectl apply -f kuma-values.yaml
+```
    ```bash
    kubectl create namespace monitoring
    helm install uptime-kuma uptime-kuma\uptime-kuma --namespace monitoring
    ```
-3. Check the service:
+4. Check the service:
    ```bash
    kubectl get svc -n traefik
    # Expect: TYPE LoadBalancer, External IP from MetalLB
@@ -34,7 +58,7 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    kub@kubcontrol:~/.kube$
    ```
    
-4. (Optional) Pin Traefik to a specific MetalLB pool:
+5. (Optional) Pin Traefik to a specific MetalLB pool:
    ```bash
    kubectl annotate service traefik -n traefik metallb.universe.tf/address-pool=general-pool --overwrite
    ```
