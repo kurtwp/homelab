@@ -16,10 +16,11 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
    helm repo update
    ```
 2. Create the `uptime kuma` namespace and install Uptime Kuma:
-Create `kuma-values.yaml`:  
-> [!Note]
->  
----
+```bash
+   helm install uptime-kuma uptime-kuma\uptime-kuma --namespace monitoring --creat-namespace
+   ```
+3. Create kuma-values.yaml:  
+
 ```yaml
 ## Use local-path storage (default in K3s)
 storage:
@@ -41,13 +42,12 @@ Apply it:
 kubectl apply -f kuma-values.yaml
 ```
    ```bash
-   kubectl create namespace monitoring
-   helm install uptime-kuma uptime-kuma\uptime-kuma --namespace monitoring
-   ```
+  
 4. Check the service:
    ```bash
-   kubectl get svc -n traefik
-   # Expect: TYPE LoadBalancer, External IP from MetalLB
+   kubectl get pods -n monitoring
+   kubectl get svc -n monitoring
+  
    ```
    You should see an IP address assigned to Traefix as depicted below:
    
