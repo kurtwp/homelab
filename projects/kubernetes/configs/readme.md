@@ -9,4 +9,4 @@
 - **[Step 3](step3.md):** — Installing K3s
 - **[Step 4](step4.md):** — Installing MetalLB
 - **[Step 5](step5.md):** — Installing Traefix
-- **Step 6:** — Coming soon
+- **[Step 6](step6.md):** — Installing Adguard
