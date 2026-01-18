@@ -10,15 +10,15 @@ Traefik is a modern, cloud-native reverse proxy and ingress controller. This gui
 - MetalLB installed and configured with an `IPAddressPool` (e.g., `general-pool`).
 
 ## Installation Steps
-1. Add the Traefik chart repository and update:
+1. Add the Uptime Kuma chart repository and update:
    ```bash
    helm repo add uptime-kuma https://helm.irsigler.cloud
    helm repo update
    ```
-2. Create the `traefik` namespace and install Traefik:
+2. Create the `uptime kuma` namespace and install Traefik:
    ```bash
-   kubectl create namespace traefik
-   helm install traefik traefik/traefik --namespace traefik
+   kubectl create namespace monitoring
+   helm install uptime-kuma uptime-kuma\uptime-kuma --namespace monitoring
    ```
 3. Check the service:
    ```bash
@@ -45,32 +45,61 @@ After the command issues above Traefix will be assigned a IP from the pool as sh
    traefik   LoadBalancer   10.43.41.48   192.168.2.20   80:31325/TCP,443:31885/TCP   5m37s
    kub@kubcontrol:~/.kube$
 ```
-## Configuration — Expose Traefik Dashboard
-Create `dashboard.yaml`:  
+## Configuration — Uptime Kuma
+Create `kuma-values.yaml`:  
 > [!Note]
->  Notice in the .yaml file that a domain (traefik.home.arpa) name is being used instead of an IP address.
-> This was done on purpose as in Step 6, Adguard will be installed.  Therefor to access Traefik dashboard you will
-> need to add the IP address plus the FQDN in your hosts file.   
+>  
 ---
 ```yaml
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: traefik-dashboard
-  namespace: traefik
-spec:
-  entryPoints:
-  - web
-  routes:
-  - match: Host(`traefik.home.arpa`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
-    kind: Rule
-    services:
-    - name: api@internal
-      kind: TraefikService
+## Use local-path storage (default in K3s)
+storage:
+  enabled: true
+  storageClassName: local-path
+  size: 2Gi
+
+ingress:
+  enabled: true
+  className: traefik
+  hosts:
+    - host: uptime.home.arpa  # <--- Change this to your preferred local domain
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
 ```
 Apply it:
 ```bash
-kubectl apply -f dashboard.yaml
+kubectl apply -f kuma-values.yaml
+```
+## Configuration — Uptime Kuma Traefik Ingress
+Create `kuma-ingress.yaml`:  
+> [!Note]
+>  
+---
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: uptime-kuma
+  namespace: monitoring
+  annotations:
+    # This tells the K3s Traefik controller to pick up this rule
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: uptime.home.arpa
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: uptime-kuma
+            port:
+              number: 3001
+```
+Apply it:
+```bash
+kubectl apply -f kuma-ingress.yaml
 ```
 ## Update hosts file on Linux or Windows
 ```bash
