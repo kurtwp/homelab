@@ -33,14 +33,10 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
 ```
-   ```bash
 3. Create the `uptime kuma` namespace and install Uptime Kuma:
 ```bash
-  helm upgrade --install uptime-kuma uptime-kuma/uptime-kuma \
-  --namespace monitoring \
-  --create-namespace \
-  -f kuma-values.yaml
-   ```  
+ helm upgrade --install uptime-kuma uptime-kuma/uptime-kuma --namespace monitoring --create-namespace -f kuma-values.yaml
+```  
 4. Check the service:
    ```bash
    kubectl get pods -n monitoring
