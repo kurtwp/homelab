@@ -18,18 +18,19 @@ Why this setup?
 
 If you're looking to stay with INTEL CPUs you can tweak your setup even further, using higher spec mini PCs such as the Intel N97 or N150 models with 16GB RAM and at least 512GB SSDs for your control plane nodes. 
 
-For worker nodes, you can save a few bucks by going with Intel N95 mini PCs that come with 8GB RAM and, ideally, a 512GB SSD. While they’re slightly less powerful, they’re more than capable of running container workloads and the cost savings can add up if you're scaling your cluster.
+For worker nodes, you can save a few bucks by going with Intel N95 mini PCs that come with 8GB RAM and, ideally, a 512GB SSD. While they’re slightly less powerful, they’re more than capable of running container workloads, and the cost savings can add up as you scale your cluster.
 
-                                         Simialr AMD CPUs
+| Intel Model | Core/Thread Count | Intel TDP | Performance Equivalent (AMD) | AMD Specs (Cores/Threads/TDP) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Intel N95** | 4C / 4T | 15W | Ryzen 5 5500U | 6C / 12T (10–25W) |
+| **Intel N97** | 4C / 4T | 12W | Ryzen 5 7430U | 6C / 12T (15W) |
+| **Intel N97** | 4C / 4T | 12W | Ryzen 7 5700U | 8C / 16T (10–25W) |
+| **Intel N150** | 4C / 4T | 6W | Ryzen 5 7530U | 6C / 12T (15–28W) |
+| **Intel N150** | 4C / 4T | 6W | Ryzen 7 5825U | 8C / 16T (15W) |Simialr AMD CPUs
                 
-            | Intel Model | AMD Equivalent   | Cores/Threads  | TDP       |
-            |-------------|------------------|----------------|-----------|
-            | N95         | Ryzen 5 5500U    | 6C / 12T       | 10–15 W   |
-            | N97         | Ryzen 5 7430U    | 6C / 12T       | 15 W      |
-            | N97         | Ryzen 7 5700U    | 8C / 16T       | 15-25 W   |
-            | N150        | Ryzen 5 7530U    | 6C / 12T       |  15–28 W  |
-            | N150        | Ryzen 7 5825U    | 8C / 16T       | 15–25 W   |
+           
 
 Of course, there’s also the option to buy used equipment, which can offer more powerful specs such as higher core counts or ECC memory at a similar or even lower price. However, used gear often comes with higher power consumption and potential reliability concerns. For my needs, the Kamrui E1s struck the right balance between performance, efficiency, and cost.
 
 [Back](../readme.md)
+
