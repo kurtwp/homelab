@@ -105,6 +105,7 @@ sudo k3s kubectl get nodes
 - **[Step 4](configs/step4.md):** — Installing MetalLB
 - **[Step 5](configs/step5.md):** — Installing Traefik
 - **[Step 6](configs/step6.md):** — Installing Adguard
+- **[Step 7](configs/step7.md):** — Installing Uptime-Kuma
 
 
 ##  Testing
