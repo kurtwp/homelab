@@ -2,7 +2,8 @@
 # Step 7: Installing Uptime Kuma k3s on Kumrui MiniPCs
 
 ## Introduction
-Traefik is a modern, cloud-native reverse proxy and ingress controller. This guide shows how to install Traefik via Helm on a K3s cluster, assign an external IP with MetalLB, and expose the Traefik dashboard.
+Uptime Kuma is a self hosted monitoring tool that tracks the uptime, performance, and availability of your services with a clean, modern dashboard.
+It offers flexible checks, alerts, and integrations, making it an ideal open source tool for your home lab.
 
 ## Prerequisites
 - Kubernetes (K3s) cluster with `kubectl` configured.
