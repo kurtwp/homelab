@@ -8,7 +8,7 @@ It offers flexible checks, alerts, and integrations, making it an ideal open sou
 ## Prerequisites
 - Kubernetes (K3s) cluster with `kubectl` configured.
 - Helm 3 installed.
-- MetalLB installed and configured with an `IPAddressPool` (e.g., `general-pool`).
+- Traefik installed and configured.
 
 ## Installation Steps
 1. Add the Uptime Kuma chart repository and update:
