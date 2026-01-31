@@ -20,3 +20,15 @@ helm install longhorn longhorn/longhorn \
   --create-namespace \
   --set service.ui.type=LoadBalancer
 ```
+
+Phase 3: Install Traefik with its own IP
+Since you removed the default K3s Traefik, we’ll install the official Helm chart. MetalLB will automatically grab the next IP (likely .61).
+
+```Bash
+helm repo add traefik https://traefik.github.io/charts
+helm repo update
+
+helm install traefik traefik/traefik \
+  --namespace traefik \
+  --create-namespace
+```
