@@ -159,3 +159,10 @@ spec:
     port: 80
     targetPort: 80
 ```
+3. Apply the Files
+Run these commands in order:
+
+```bash
+kubectl apply -f adguard-pvc.yaml
+kubectl apply -f adguard-app.yaml
+```
