@@ -59,3 +59,24 @@ helm install traefik traefik/traefik \
   --namespace traefik \
   --create-namespace
 ```
+
+Phase 3: Installing AdGuard Home
+We will use a YAML file to define the Persistent Volume Claim (PVC) first, then the Deployment.
+
+1. Create the Storage Claim (adguard-pvc.yaml)
+This tells the cluster: "Hey Longhorn, give me some space for AdGuard."
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: adguard-pvc
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 5Gi
+```
