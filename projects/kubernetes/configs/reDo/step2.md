@@ -20,6 +20,33 @@ helm install longhorn longhorn/longhorn \
   --create-namespace \
   --set service.ui.type=LoadBalancer
 ```
+# move Longhorn to .61
+```bash
+kub@kcontrol:~/.kube$ kubectl get svc -A
+NAMESPACE         NAME                         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)                  AGE
+default           kubernetes                   ClusterIP      10.43.0.1       <none>         443/TCP                  24m
+kube-system       kube-dns                     ClusterIP      10.43.0.10      <none>         53/UDP,53/TCP,9153/TCP   24m
+kube-system       metrics-server               ClusterIP      10.43.59.159    <none>         443/TCP                  24m
+longhorn-system   longhorn-admission-webhook   ClusterIP      10.43.194.151   <none>         9502/TCP                 81s
+longhorn-system   longhorn-backend             ClusterIP      10.43.158.222   <none>         9500/TCP                 81s
+longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.65   80:30513/TCP             81s
+longhorn-system   longhorn-recovery-backend    ClusterIP      10.43.130.48    <none>         9503/TCP                 81s
+metallb-system    metallb-webhook-service      ClusterIP      10.43.25.161    <none>         443/TCP                  19m
+kub@kcontrol:~/.kube$ kubectl patch svc longhorn-frontend -n longhorn-system -p '{"spec":{"loadBalancerIP": "192.168.2.61"}}'
+service/longhorn-frontend patched
+kub@kcontrol:~/.kube$ kubectl get svc -A
+NAMESPACE         NAME                         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)                  AGE
+default           kubernetes                   ClusterIP      10.43.0.1       <none>         443/TCP                  26m
+kube-system       kube-dns                     ClusterIP      10.43.0.10      <none>         53/UDP,53/TCP,9153/TCP   25m
+kube-system       metrics-server               ClusterIP      10.43.59.159    <none>         443/TCP                  25m
+longhorn-system   longhorn-admission-webhook   ClusterIP      10.43.194.151   <none>         9502/TCP                 2m42s
+longhorn-system   longhorn-backend             ClusterIP      10.43.158.222   <none>         9500/TCP                 2m42s
+longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.61   80:30513/TCP             2m42s
+longhorn-system   longhorn-recovery-backend    ClusterIP      10.43.130.48    <none>         9503/TCP                 2m42s
+metallb-system    metallb-webhook-service      ClusterIP      10.43.25.161    <none>         443/TCP                  20m
+kub@kcontrol:~/.kube$
+```
+
 
 Phase 3: Install Traefik with its own IP
 Since you removed the default K3s Traefik, we’ll install the official Helm chart. MetalLB will automatically grab the next IP (likely .61).
