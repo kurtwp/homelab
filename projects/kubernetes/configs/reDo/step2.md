@@ -89,6 +89,37 @@ Deployment: Runs the AdGuard container and plugs in the Longhorn storage.
 Service: Tells MetalLB to give it the specific IP 192.168.2.65.
 
 ```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: adguard-home
+  namespace: default  # Changed back to default to match your PVC
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "adguard"
+spec:
+  selector:
+    app: adguard-home
+  type: LoadBalancer
+  loadBalancerIP: 192.168.2.53  # Your desired IP
+  externalTrafficPolicy: Local
+  ports:
+    - name: dns-tcp
+      port: 53
+      targetPort: 53
+      protocol: TCP
+    - name: dns-udp
+      port: 53
+      targetPort: 53
+      protocol: UDP
+    - name: http-setup
+      port: 3000
+      targetPort: 3000
+      protocol: TCP
+    - name: http-ui
+      port: 80
+      targetPort: 80
+      protocol: TCP
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -96,6 +127,8 @@ metadata:
   namespace: default
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: adguard-home
@@ -105,59 +138,26 @@ spec:
         app: adguard-home
     spec:
       containers:
-      - name: adguard-home
-        image: adguard/adguardhome:latest
-        ports:
-        - containerPort: 53
-          name: dns-tcp
-          protocol: TCP
-        - containerPort: 53
-          name: dns-udp
-          protocol: UDP
-        - containerPort: 3000
-          name: setup-ui
-        - containerPort: 80
-          name: http
-        volumeMounts:
-        - name: adguard-data
-          mountPath: /opt/adguardhome/work
-        - name: adguard-config
-          mountPath: /opt/adguardhome/conf
+        - name: adguard-home
+          image: adguard/adguardhome:latest
+          ports:
+            - containerPort: 53
+              protocol: TCP
+            - containerPort: 53
+              protocol: UDP
+            - containerPort: 3000
+            - containerPort: 80
+          volumeMounts:
+            - name: adguard-storage
+              mountPath: /opt/adguardhome/work
+              subPath: work
+            - name: adguard-storage
+              mountPath: /opt/adguardhome/conf
+              subPath: conf
       volumes:
-      - name: adguard-data
-        persistentVolumeClaim:
-          claimName: adguard-pvc
-      - name: adguard-config
-        persistentVolumeClaim:
-          claimName: adguard-pvc
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: adguard-service
-  namespace: default
-  annotations:
-    metallb.universe.tf/allow-shared-ip: "adguard" # Helpful if you add more ports later
-spec:
-  selector:
-    app: adguard-home
-  type: LoadBalancer
-  loadBalancerIP: 192.168.2.65
-  ports:
-  - name: dns-tcp
-    port: 53
-    targetPort: 53
-    protocol: TCP
-  - name: dns-udp
-    port: 53
-    targetPort: 53
-    protocol: UDP
-  - name: setup-ui
-    port: 3000
-    targetPort: 3000
-  - name: http
-    port: 80
-    targetPort: 80
+        - name: adguard-storage
+          persistentVolumeClaim:
+            claimName: adguard-pvc  # This uses the Longhorn disk we fixed!
 ```
 3. Apply the Files
 Run these commands in order:
