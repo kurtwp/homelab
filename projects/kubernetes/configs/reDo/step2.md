@@ -80,3 +80,82 @@ spec:
     requests:
       storage: 5Gi
 ```
+
+2. Create the Deployment & Service (adguard-app.yaml)
+This file does two things:
+
+Deployment: Runs the AdGuard container and plugs in the Longhorn storage.
+
+Service: Tells MetalLB to give it the specific IP 192.168.2.65.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adguard-home
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adguard-home
+  template:
+    metadata:
+      labels:
+        app: adguard-home
+    spec:
+      containers:
+      - name: adguard-home
+        image: adguard/adguardhome:latest
+        ports:
+        - containerPort: 53
+          name: dns-tcp
+          protocol: TCP
+        - containerPort: 53
+          name: dns-udp
+          protocol: UDP
+        - containerPort: 3000
+          name: setup-ui
+        - containerPort: 80
+          name: http
+        volumeMounts:
+        - name: adguard-data
+          mountPath: /opt/adguardhome/work
+        - name: adguard-config
+          mountPath: /opt/adguardhome/conf
+      volumes:
+      - name: adguard-data
+        persistentVolumeClaim:
+          claimName: adguard-pvc
+      - name: adguard-config
+        persistentVolumeClaim:
+          claimName: adguard-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adguard-service
+  namespace: default
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "adguard" # Helpful if you add more ports later
+spec:
+  selector:
+    app: adguard-home
+  type: LoadBalancer
+  loadBalancerIP: 192.168.2.65
+  ports:
+  - name: dns-tcp
+    port: 53
+    targetPort: 53
+    protocol: TCP
+  - name: dns-udp
+    port: 53
+    targetPort: 53
+    protocol: UDP
+  - name: setup-ui
+    port: 3000
+    targetPort: 3000
+  - name: http
+    port: 80
+    targetPort: 80
+```
