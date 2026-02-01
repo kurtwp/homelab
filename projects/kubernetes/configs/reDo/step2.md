@@ -166,3 +166,66 @@ Run these commands in order:
 kubectl apply -f adguard-pvc.yaml
 kubectl apply -f adguard-app.yaml
 ```
+
+Since your Longhorn storage and MetalLB networking are now officially "dialed in," Uptime-Kuma will be a breeze. We’ll use the same pattern: a Longhorn PVC for the database and a LoadBalancer IP for the dashboard.
+
+1. Create the Uptime-Kuma YAML
+
+```bash
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: uptime-kuma-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uptime-kuma
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: uptime-kuma
+  template:
+    metadata:
+      labels:
+        app: uptime-kuma
+    spec:
+      containers:
+      - name: uptime-kuma
+        image: louislam/uptime-kuma:1
+        ports:
+        - containerPort: 3001
+        volumeMounts:
+        - name: uptime-data
+          mountPath: /app/data
+      volumes:
+      - name: uptime-data
+        persistentVolumeClaim:
+          claimName: uptime-kuma-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: uptime-kuma-service
+spec:
+  selector:
+    app: uptime-kuma
+  type: LoadBalancer
+  loadBalancerIP: 192.168.2.54
+  ports:
+  - port: 80
+    targetPort: 3001
+    protocol: TCP
+```
+
+Save this as uptime-kuma.yaml. I've set the IP to 192.168.2.54 to keep it right next to AdGuard.
