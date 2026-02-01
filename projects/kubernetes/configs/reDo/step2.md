@@ -231,4 +231,5 @@ spec:
 kubectl apply -f uptime-kuma.yaml
 kubectl get pods,svc -l app=uptime-kuma
 ```
-
+---
+"Self-Healing" setup. If kwk2 (where your pods are likely running) goes offline, Kubernetes will notice, and Longhorn will re-attach that storage to kwk1 or kcontrol, bringing your DNS and Monitoring back online automatically.
