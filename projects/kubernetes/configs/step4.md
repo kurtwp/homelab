@@ -41,7 +41,7 @@ kubectl get node  # Will return nothing
 ```
 
 ***
-Once you have K3s installed on the control node, refer to [Step 3](projects/kubernetes/configs/step3.md) to complete the K3s install on the worker nodes.
+Once you have K3s installed on the control node, refer to [Step 5](projects/kubernetes/configs/step5.md) to complete the K3s install on the worker nodes.
 
 ---
 
