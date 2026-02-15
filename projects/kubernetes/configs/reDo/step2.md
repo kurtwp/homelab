@@ -226,7 +226,7 @@ spec:
   selector:
     app: uptime-kuma
   type: LoadBalancer
-  loadBalancerIP: 192.168.2.23
+  loadBalancerIP: 192.168.2.22
   ports:
   - port: 80
     targetPort: 3001
