@@ -1,5 +1,5 @@
 
-## Longhorn is a lightweight, open-source, distributed block storage system designed specifically for Kubernetes, often used with K3s to provide persistent, highly available storage for stateful applications. It works by replicating data across multiple nodes in a cluster, enabling pods to move between nodes without data loss. 
+## **Longhorn** is a lightweight, open-source, distributed block storage system designed specifically for Kubernetes, often used with K3s to provide persistent, highly available storage for stateful applications. It works by replicating data across multiple nodes in a cluster, enabling pods to move between nodes without data loss. 
 
 
 
