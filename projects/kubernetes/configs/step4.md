@@ -41,6 +41,7 @@ kubectl get node  # Will return nothing
 ```
 
 ***
+Once you have K3s installed on the control node, refer to [Step 3](projects/kubernetes/configs/step3.md) to complete the K3s innstall on the worker nodes.
 
 ## ✅ Step 2: Install Helm
 MetalLB is deployed via Helm, so install Helm first:
