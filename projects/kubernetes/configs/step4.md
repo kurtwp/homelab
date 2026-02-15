@@ -1,7 +1,7 @@
 # Step 4: Installing MetalLB k3s on Kumrui MiniPCs
 MetalLB is a load balancer implementation for bare-metal Kubernetes clusters. If you’re running **K3s** without a cloud provider, MetalLB gives you the ability to assign external IPs to services of type `LoadBalancer`. This guide walks through installing MetalLB, configuring IP pools, and testing with a sample deployment.
 > [!Note]
-> [Step 5](step5.mb) will illustrate the steps needed to install reinstall **Traefik**.
+> [Step 5](https://github.com/kurtwp/homelab/blob/main/projects/kubernetes/configs/step5.md) will illustrate the steps needed to install reinstall **Traefik**.
 ---
 <p>
  <strong>ServiceLB</strong> is the default load balancer that comes pre-installed with K3s, designed for users who want external connectivity without manual configuration. It functions by deploying a "proxy" pod as a daemon set across every node in your cluster; when traffic hits a node's physical IP address on a specific service port, this proxy pod intercepts the request and redirects it to the appropriate application pod. While it offers the major advantage of working immediately out of the box with zero setup, it does not provide unique <strong>Virtual IPs</strong> for your services. Instead, it relies entirely on the existing IP addresses of your nodes, which can be inefficient because it leads to port conflicts. If one service occupies port 80, no other LoadBalancer service can use that same port across the nodes.
