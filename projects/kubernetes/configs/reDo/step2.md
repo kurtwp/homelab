@@ -11,8 +11,8 @@
 - Install Uptime-Kuma
   
 ---
-Phase 1: Prepare the Nodes (Don't skip this!)
-Longhorn will fail to mount volumes if these aren't on every node. Run this on c kcontrol, kwk1, and kwk2:
+**Step 1: Prepare the Nodes (Don't skip this!)
+Longhorn will fail to mount volumes if these aren't on every node. Run this on kubcontrol, kubwk1, and kubwk2:
 
 ```Bash
 sudo apt update && sudo apt install -y open-iscsi nfs-common
