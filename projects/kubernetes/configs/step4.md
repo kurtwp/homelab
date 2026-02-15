@@ -164,9 +164,9 @@ With MetalLB configured, your bare-metal Kubernetes cluster can now assign exter
 ```bash 
 kubectl apply -f metallb-config.yaml
 kubectl get pods -n metallb-system
-kubectl get ipaddresspool -n metallb-system
+**kubectl get ipaddresspool -n metallb-system**
 kubectl get l2advertisement -n metallb-system
-kubectl get ipaddresspool -n metallb-system general-pool -o yaml
+**kubectl get ipaddresspool -n metallb-system general-pool -o yaml**
 kubectl get l2advertisement -n metallb-system
 ```
 
