@@ -1,6 +1,7 @@
 
 # Installing Longhorn for k3s on Kumrui MiniPCs
 **Longhorn** is a lightweight, open-source, distributed block storage system designed specifically for Kubernetes, often used with K3s to provide persistent, highly available storage for stateful applications. It works by replicating data across multiple nodes in a cluster, enabling pods to move between nodes without data loss. 
+
 ---
 Phase 1: Prepare the Nodes (Don't skip this!)
 Longhorn will fail to mount volumes if these aren't on every node. Run this on c kcontrol, kwk1, and kwk2:
