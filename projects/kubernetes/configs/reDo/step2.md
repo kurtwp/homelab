@@ -11,7 +11,7 @@
 - Install Uptime-Kuma
   
 ---
-**Step 1: Prepare the Nodes (Don't skip this!)
+**Step 1**: Prepare the Nodes (Don't skip this!)
 Longhorn will fail to mount volumes if these aren't on every node. Run this on kubcontrol, kubwk1, and kubwk2:
 
 ```Bash
@@ -19,8 +19,8 @@ sudo apt update && sudo apt install -y open-iscsi nfs-common
 sudo systemctl enable --now iscsid
 ```
 
-Phase 2: Install Longhorn with a Dedicated IP
-We will tell MetalLB to give Longhorn the first available IP (likely .60).
+**Step 2**: Install Longhorn with a Dedicated IP
+We will tell MetalLB to give Longhorn the first available IP (likely .53).
 
 ```Bash
 # Add and update helm repo
@@ -33,7 +33,7 @@ helm install longhorn longhorn/longhorn \
   --create-namespace \
   --set service.ui.type=LoadBalancer
 ```
-# move Longhorn to .61
+## Move Longhorn to .21
 ```bash
 kub@kcontrol:~/.kube$ kubectl get svc -A
 NAMESPACE         NAME                         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)                  AGE
@@ -42,11 +42,17 @@ kube-system       kube-dns                     ClusterIP      10.43.0.10      <n
 kube-system       metrics-server               ClusterIP      10.43.59.159    <none>         443/TCP                  24m
 longhorn-system   longhorn-admission-webhook   ClusterIP      10.43.194.151   <none>         9502/TCP                 81s
 longhorn-system   longhorn-backend             ClusterIP      10.43.158.222   <none>         9500/TCP                 81s
-longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.65   80:30513/TCP             81s
+longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.53  80:30513/TCP             81s
 longhorn-system   longhorn-recovery-backend    ClusterIP      10.43.130.48    <none>         9503/TCP                 81s
 metallb-system    metallb-webhook-service      ClusterIP      10.43.25.161    <none>         443/TCP                  19m
-kub@kcontrol:~/.kube$ kubectl patch svc longhorn-frontend -n longhorn-system -p '{"spec":{"loadBalancerIP": "192.168.2.61"}}'
+```
+---
+```bash
+kub@kcontrol:~/.kube$ kubectl patch svc longhorn-frontend -n longhorn-system -p '{"spec":{"loadBalancerIP": "192.168.2.21"}}'
 service/longhorn-frontend patched
+```
+---
+```bash
 kub@kcontrol:~/.kube$ kubectl get svc -A
 NAMESPACE         NAME                         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)                  AGE
 default           kubernetes                   ClusterIP      10.43.0.1       <none>         443/TCP                  26m
@@ -54,15 +60,15 @@ kube-system       kube-dns                     ClusterIP      10.43.0.10      <n
 kube-system       metrics-server               ClusterIP      10.43.59.159    <none>         443/TCP                  25m
 longhorn-system   longhorn-admission-webhook   ClusterIP      10.43.194.151   <none>         9502/TCP                 2m42s
 longhorn-system   longhorn-backend             ClusterIP      10.43.158.222   <none>         9500/TCP                 2m42s
-longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.61   80:30513/TCP             2m42s
+longhorn-system   longhorn-frontend            LoadBalancer   10.43.46.128    192.168.2.21   80:30513/TCP             2m42s
 longhorn-system   longhorn-recovery-backend    ClusterIP      10.43.130.48    <none>         9503/TCP                 2m42s
 metallb-system    metallb-webhook-service      ClusterIP      10.43.25.161    <none>         443/TCP                  20m
 kub@kcontrol:~/.kube$
 ```
 
 
-Phase 3: Install Traefik with its own IP
-Since you removed the default K3s Traefik, we’ll install the official Helm chart. MetalLB will automatically grab the next IP (likely .61).
+**Step 3**: Install Traefik with its own IP
+Since you removed the default K3s Traefik, we’ll install the official Helm chart. MetalLB will automatically grab the next IP (likely .20).
 
 ```Bash
 helm repo add traefik https://traefik.github.io/charts
@@ -73,7 +79,7 @@ helm install traefik traefik/traefik \
   --create-namespace
 ```
 
-Phase 3: Installing AdGuard Home
+**Step 4**: Installing AdGuard Home
 We will use a YAML file to define the Persistent Volume Claim (PVC) first, then the Deployment.
 
 1. Create the Storage Claim (adguard-pvc.yaml)
@@ -99,7 +105,7 @@ This file does two things:
 
 Deployment: Runs the AdGuard container and plugs in the Longhorn storage.
 
-Service: Tells MetalLB to give it the specific IP 192.168.2.65.
+Service: Tells MetalLB to give it the specific IP 192.168.2.53.
 
 ```yaml
 apiVersion: v1
@@ -180,9 +186,9 @@ kubectl apply -f adguard-pvc.yaml
 kubectl apply -f adguard-app.yaml
 ```
 
-Since your Longhorn storage and MetalLB networking are now officially "dialed in," Uptime-Kuma will be a breeze. We’ll use the same pattern: a Longhorn PVC for the database and a LoadBalancer IP for the dashboard.
+**Step 4**: Uptime-Kuma Since your Longhorn storage and MetalLB networking are now officially "dialed in," Uptime-Kuma will be a breeze. We’ll use the same pattern: a Longhorn PVC for the database and a LoadBalancer IP for the dashboard.
 
-1. Create the Uptime-Kuma YAML Save this as uptime-kuma.yaml. I've set the IP to 192.168.2.54 to keep it right next to AdGuard.
+1. Create the Uptime-Kuma YAML Save this as uptime-kuma.yaml. I've set the IP to 192.168.2.22 to keep it right next to AdGuard.
 
 ```yaml
 apiVersion: v1
