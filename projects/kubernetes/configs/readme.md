@@ -10,3 +10,5 @@
 - **[Step 4](step4.md):** — Installing MetalLB
 - **[Step 5](step5.md):** — Installing Traefix
 - **[Step 6](step6.md):** — Installing Adguard
+- **[Step 7](step7.md):** — Installing Uptime_Kuma
+- **[Step 8](redo):**     — Installing Longhorn
