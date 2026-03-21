@@ -12,9 +12,128 @@ A guide for temporarily migrating ~2.5TB of NAS data to an Ubuntu 24.04 server w
 
 ---
 
-## Drive Configuration Options
+## Part 1: Installing Ubuntu 24.04 Server
 
-Two 2TB drives and 2.5TB of data, **RAID-1 (mirroring) is not possible** — there isn't enough total space:
+### What You'll Need
+
+- Ubuntu 24.04 LTS Server ISO — download from [ubuntu.com/download/server](https://ubuntu.com/download/server)
+- A bootable USB drive (8GB+) — use [Balena Etcher](https://etcher.balena.io/) or `dd` to write the ISO
+- The server machine with both 2TB drives installed
+
+---
+
+### Step 1: Boot from USB
+
+1. Insert the USB drive and power on the server
+2. Enter the BIOS/UEFI boot menu (usually **F2**, **F11**, **F12**, or **DEL** on boot)
+3. Set the USB drive as the first boot device
+4. Save and reboot — the Ubuntu installer will load
+
+---
+
+### Step 2: Installer Language & Keyboard
+
+- Select **English** (or your preferred language)
+- Choose your keyboard layout
+- Select **Ubuntu Server** (not the minimized version)
+
+---
+
+### Step 3: Network Configuration
+
+- The installer will attempt DHCP automatically
+- If you want a **static IP** (recommended for a server), select the interface → **Edit IPv4** → change to **Manual** and enter:
+  - Subnet (e.g. `192.168.1.0/24`)
+  - Address (e.g. `192.168.1.50`)
+  - Gateway (e.g. `192.168.1.1`)
+  - DNS (e.g. `8.8.8.8` or your router IP)
+
+> 💡 A static IP makes it easier to SSH in and keeps the NAS transfer setup consistent.
+
+---
+
+### Step 4: Storage / Disk Layout
+
+> ⚠️ This is the most important step. You only want Ubuntu on **one** drive — leave the second drive unconfigured for LVM setup later.
+
+1. Select **Custom storage layout**
+2. Select the **first drive** (e.g. `/dev/sda`) for the OS
+3. Create the following partitions on `/dev/sda`:
+
+| Partition | Size | Format | Mount |
+|-----------|------|--------|-------|
+| EFI System Partition | 1 GB | fat32 | `/boot/efi` |
+| Boot partition | 2 GB | ext4 | `/boot` |
+| Root partition | Remaining space | ext4 | `/` |
+
+4. **Leave `/dev/sdb` completely unformatted and unpartitioned** — this will be used for LVM later along with the second drive
+5. Confirm and proceed — the installer will warn about formatting, confirm to continue
+
+---
+
+### Step 5: Profile Setup
+
+- Enter your **name**, **server hostname** (e.g. `nas-temp`), **username**, and **password**
+- Choose a strong password — this account will have sudo access
+
+---
+
+### Step 6: SSH Setup
+
+- Select **Install OpenSSH server** ✅
+- This lets you manage the server remotely without a monitor/keyboard attached
+
+---
+
+### Step 7: Featured Snaps
+
+- Skip all optional snaps — you don't need them for this use case
+- Select **Done** and let the installation complete
+
+---
+
+### Step 8: Post-Install First Boot
+
+Once the server reboots, SSH in from another machine:
+
+```bash
+ssh youruser@192.168.1.50
+```
+
+Then run a full system update:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo reboot
+```
+
+---
+
+### Step 9: Identify Your Drives
+
+After reboot, confirm which drives are which before setting up LVM:
+
+```bash
+lsblk
+```
+
+Example output:
+```
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda    8:0      0  2TB  0  disk
+├─sda1          ...      /boot/efi
+├─sda2          ...      /boot
+└─sda3          ...      /
+sdb    8:16     0  2TB  0  disk        ← empty, ready for LVM
+```
+
+> 💡 If you have a third drive or are unsure of device names, use `sudo fdisk -l` for full detail.
+
+---
+
+## Part 2: Drive Configuration Options
+
+Since you have two 2TB drives and 2.5TB of data, **RAID-1 (mirroring) is not possible** — there isn't enough total space. The real options are:
 
 ### Option A: LVM (Logical Volume Manager) — Recommended
 
@@ -48,7 +167,7 @@ Mount each drive independently (`/mnt/disk1`, `/mnt/disk2`) and manually split t
 
 ---
 
-## Transferring Data from the NAS
+## Part 3: Transferring Data from the NAS
 
 **Rsync is the recommended tool:**
 
