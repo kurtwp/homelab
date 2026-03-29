@@ -174,6 +174,31 @@ To ensure the hardware itself is healthy before moving 2.5TB, you can run a quic
 sudo apt install smartmontools -y
 sudo smartctl -H /dev/sdb
 ```
+**Auto Mount Disk2**<br>
+This ensures that if the Ubuntu server reboots, /mnt/disk2 automatically mounts itself back to the right spot.
+```bash
+# Find the UUID of your new volume
+sudo blkid /dev/mapper/backup_vg-backup_lv
+
+# Back up your fstab file (Safety first!)
+sudo cp /etc/fstab /etc/fstab.bak
+
+# Add the entry to fstab
+sudo /etc/fstab
+
+# Add to the end of the file
+UUID=YOUR-UUID-HERE  /mnt/disk2  ext4  defaults  0  2
+```
+**Test the configuration**<br>
+This is the most important part. If there’s a typo in fstab, the server might fail to boot. Run this to test it safely
+```bash
+sudo umount /mnt/disk2
+sudo mount -a (get eror message use below)
+sudo systemctl daemon-reload
+
+# Verify that the drive actually mounted where it belongs:
+df -h | grep disk2
+```
 
 ## Part 3: Transferring Data from the NAS
 
