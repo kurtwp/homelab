@@ -259,16 +259,6 @@ find /mnt/nas_backup -type f -exec md5sum {} \; > /home/youruser/backup_checksum
 
 ---
 
-## Persist the Mount Across Reboots
-
-Add to `/etc/fstab` so the LVM volume auto-mounts if the server reboots mid-transfer:
-
-```
-/dev/backup_vg/backup_lv  /mnt/nas_backup  ext4  defaults  0  2
-```
-
----
-
 ## Key Recommendations
 
 1. **Use LVM (Option A)** — the simplicity of a single mount point is worth it for a temporary migration
