@@ -1,6 +1,6 @@
 # NAS Migration: Temporary Ubuntu Storage Setup
 
-A guide for temporarily migrating ~2.5TB of NAS data to an Ubuntu 24.04 server with two 2TB drives before rebuilding the NAS.
+A guide for temporarily migrating ~2.2TB of NAS data to an Ubuntu 24.04 server with two 2TB drives before rebuilding the NAS.
 
 ---
 
