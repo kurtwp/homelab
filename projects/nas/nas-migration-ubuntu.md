@@ -153,8 +153,27 @@ sudo mount /dev/backup_vg/backup_lv /mnt/disk2
 ```bash
 sudo mkdir -p /mnt/disk1
 sudo chown $USER:$USER /mnt/disk1 /mnt/disk2
+# Quick Verification
+ls -ld /mnt/disk1 /mnt/disk2
 ```
----
+**Create a Test File**<br>
+Since the seconf drive is mpunted to /mnt/disk2, need to test by creating a small text file on disk 2:
+```bash
+echo "Testing second drive" > /mnt/disk2/test_file.txt
+# Check if the file exists and read its content
+ls -l /mnt/disk2/test_file.txt
+cat /mnt/disk2/test_file.txt
+```
+**Confirm Disk Mapping**
+```bash
+df -h /mnt/disk2/test_file.txt
+```
+**Health Check (Optional)**<br>
+To ensure the hardware itself is healthy before moving 2.5TB, you can run a quick SMART health assessment using smartmontools
+```bash
+sudo apt install smartmontools -y
+sudo smartctl -H /dev/sdb
+```
 
 ## Part 3: Transferring Data from the NAS
 
