@@ -136,7 +136,7 @@ Since I have two 2TB drives and 2.2TB of data, **RAID-1 (mirroring) is not possi
 as I am moving 1.1TB from two NAS servers to the temp file server as I rebuild them both.  
 
 ### Option A: Two Separate Mount Points
-**Prepare Drive B (sdb)**
+**Prepare Drive B (sdb)**<br>
 Create the volume group and logical volume
 ```bash
 sudo vgcreate backup_vg /dev/sdb
