@@ -1,12 +1,12 @@
 # NAS Migration: Temporary Ubuntu Storage Setup
 
-A guide for temporarily migrating ~2.2TB of NAS data to an Ubuntu 24.04 server with two 2TB drives before rebuilding the NAS.
+A guide for temporarily migrating ~2.2TB of NAS data to an Ubuntu 24.04 server with two 2TB drives before rebuilding both NAS systems.
 
 ---
 
 ## Situation
 
-- **Source:** NAS with ~2.5 TB of data
+- **Source:** Two NAS servers with a total of ~2.2 TB of data
 - **Temp storage:** Ubuntu 24.04 server with two 2TB drives
 - **Goal:** Move data off NAS → rebuild NAS → move data back
 
@@ -120,7 +120,7 @@ Example output:
 ```
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda    8:0      0  2TB  0  disk
-├─sda1          ...      /boot/efi
+
 ├─sda2          ...      /boot
 └─sda3          ...      /
 sdb    8:16     0  2TB  0  disk        ← empty, ready for LVM
@@ -132,10 +132,11 @@ sdb    8:16     0  2TB  0  disk        ← empty, ready for LVM
 
 ## Part 2: Drive Configuration Options
 
-Since I have two 2TB drives and 2.2TB of data, **RAID-1 (mirroring) is not possible** — 
+Since I have two 2TB drives and 2.2TB of data, **RAID-1 (mirroring) is not possible** — However mirror was not in the plans
+as I am moving 1.1TB from two NAS servers to the temp file server as I rebuild them both.  
 
 ### Option A: Two Separate Mount Points
-
+**Prepare Drive B (sdb)**
 sudo vgcreate backup_vg /dev/sdb
 sudo lvcreate -l 100%FREE -n backup_lv backup_vg
 sudo mkfs.ext4 /dev/backup_vg/backup_lv
