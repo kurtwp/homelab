@@ -137,17 +137,15 @@ as I am moving 1.1TB from two NAS servers to the temp file server as I rebuild t
 
 ### Option A: Two Separate Mount Points
 **Prepare Drive B (sdb)**<br>
-Create the volume group and logical volume
 ```bash
+# Create the volume group and logical volume
 sudo vgcreate backup_vg /dev/sdb
 sudo lvcreate -l 100%FREE -n backup_lv backup_vg
-```
-Format it
-```bash
+
+# Format it
 sudo mkfs.ext4 /dev/backup_vg/backup_lv
-```
-Mount the new drive
-```bash
+
+# Mount the new drive
 sudo mkdir -p /mnt/disk2
 sudo mount /dev/backup_vg/backup_lv /mnt/disk2
 ```
