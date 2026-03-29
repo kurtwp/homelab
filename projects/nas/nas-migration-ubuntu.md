@@ -62,7 +62,6 @@ A guide for temporarily migrating ~2.2TB of NAS data to an Ubuntu 24.04 server w
 
 | Partition | Size | Format | Mount |
 |-----------|------|--------|-------|
-| EFI System Partition | 1 GB | fat32 | `/boot/efi` |
 | Boot partition | 2 GB | ext4 | `/boot` |
 | Root partition | Remaining space | ext4 | `/` |
 
@@ -133,37 +132,16 @@ sdb    8:16     0  2TB  0  disk        ← empty, ready for LVM
 
 ## Part 2: Drive Configuration Options
 
-Since you have two 2TB drives and 2.5TB of data, **RAID-1 (mirroring) is not possible** — there isn't enough total space. The real options are:
+Since I have two 2TB drives and 2.2TB of data, **RAID-1 (mirroring) is not possible** — 
 
-### Option A: LVM (Logical Volume Manager) — Recommended
+### Option A: Two Separate Mount Points
 
-Combine both 2TB drives into a single **4TB logical volume**. Simple, flexible, and built into Ubuntu.
+sudo vgcreate backup_vg /dev/sdb
+sudo lvcreate -l 100%FREE -n backup_lv backup_vg
+sudo mkfs.ext4 /dev/backup_vg/backup_lv
+sudo mkdir -p /mnt/disk2
+sudo mount /dev/backup_vg/backup_lv /mnt/disk2
 
-```bash
-# Install LVM (usually pre-installed)
-apt install lvm2
-
-# Create physical volumes
-pvcreate /dev/sdb /dev/sdc
-
-# Create a volume group
-vgcreate backup_vg /dev/sdb /dev/sdc
-
-# Create a logical volume spanning both drives
-lvcreate -l 100%FREE -n backup_lv backup_vg
-
-# Format and mount
-mkfs.ext4 /dev/backup_vg/backup_lv
-mkdir -p /mnt/nas_backup
-mount /dev/backup_vg/backup_lv /mnt/nas_backup
-```
-
-**Pro:** Single 4TB mount point, easy to manage.  
-**Con:** If one drive fails, you lose everything — but since this is temporary, that's acceptable.
-
-### Option B: Two Separate Mount Points
-
-Mount each drive independently (`/mnt/disk1`, `/mnt/disk2`) and manually split the data across them. More work, but no single point of failure across both drives.
 
 ---
 
