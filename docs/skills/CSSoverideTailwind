@@ -1,0 +1,69 @@
+# Skill: NiceGUI CSS Alignment Overrides
+
+This skill provides instructions for overriding Tailwind CSS layout and alignment issues in NiceGUI by using targeted, plain CSS.
+
+## When to Trigger This Skill
+Use this skill when a user is building a user interface with Python's NiceGUI framework and reports that:
+* Tailwind CSS utility classes are not aligning elements correctly.
+* NiceGUI layout containers (`ui.row()`, `ui.column()`, `ui.grid()`) are causing unexpected spacing or flexbox conflicts.
+* Deeply nested elements or third-party components (like Quasar inputs or tables) resist standard Tailwind centering or wrapping classes.
+
+## Core Rules for NiceGUI Styling
+1. **Prefer Tailwind First:** Always try to fix layout issues with standard Tailwind classes using `.classes()` (e.g., `.classes('flex items-center justify-between')`).
+2. **Use Plain CSS for Edge Cases:** If Tailwind fails due to CSS specificity or internal Quasar component scoping, inject plain CSS using `.style()`.
+3. **Keep Styles Inline or Global:** Use `.style()` for quick component-level overrides. Use `ui.add_css()` for reusable, global alignment fixes.
+
+## Actionable Code Patterns
+
+### 1. The Inline CSS Override (`.style()`)
+Use this pattern to instantly force alignment rules on a specific element by bypassing Tailwind's class utility pipeline.
+
+```python
+from nicegui import ui
+
+with ui.row().classes('w-full items-center justify-center'):
+    # If Tailwind's center alignment fails due to inner element sizing, force it with raw CSS
+    ui.label('Forced Alignment').style(
+        'display: flex !important; align-items: center !important; height: 100px;'
+    )
+```
+
+### 2. Global CSS Injection (`ui.add_css()`)
+Use this pattern when multiple elements or nested Quasar components share the same alignment bug.
+
+```python
+from nicegui import ui
+
+# Inject a global CSS class to fix flexbox misalignment on a specific widget type
+ui.add_css('''
+    .fix-alignment {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+        align-content: center !important;
+        gap: 16px;
+    }
+''')
+
+# Apply the plain CSS class alongside standard Tailwind classes
+with ui.row().classes('w-full').classes('fix-alignment'):
+    ui.button('Item 1')
+    ui.button('Item 2')
+```
+
+### 3. Fixing Deeply Nested Quasar Components
+NiceGUI components rely on Quasar under the hood. Sometimes Tailwind cannot target the inner wrapper of a component. Use the HTML deep selector (`:deep()`) or direct element styling.
+
+```python
+from nicegui import ui
+
+# Fix an input field where the inner text/icon alignment is broken
+search_input = ui.input(placeholder='Search...').classes('w-64')
+
+# Apply raw CSS to the component container to force internal alignment
+search_input.style('display: inline-flex !important; vertical-align: middle !important;')
+```
+
+## Troubleshooting Alignment Flow Chart
+1. **Is the parent container element a row or column?** Ensure it has `flex` behaviors.
+2. **Did `.classes('items-center')` fail?** Check if a child element has a fixed `height` or `display: block` breaking the flex line.
+3. **Is standard CSS required?** Apply `.style('display: flex !important; align-items: center !important;')` directly to the broken child.
