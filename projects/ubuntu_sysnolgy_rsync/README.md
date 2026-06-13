@@ -14,7 +14,7 @@ This project goes over the scripts and configuration needed to establish a daily
 ```mermaid
 graph TD
     A[Ubuntu Server: Source Data] -->|1. SSH Key Auth| B(SSH Tunnel on Port 8888)
-    B --> C{"Synology NAS (kurtwp)"}
+    B --> C{"Synology NAS (call)"}
     C --> D[Destination Folder]
     
     subgraph Backup Process
