@@ -59,6 +59,11 @@ ssh -p 8888 call@192.168.1.1
 NOTE:  No password prompt should be seen.
 ```
 ## Bash Script
+Open up an editor on the Ubuntu server, such as `VI`. 
+```
+#: vi rsync_script.sh
+```
+
 ```bash
 #!/bin/bash
 
@@ -89,6 +94,10 @@ else
     # The error here means something failed during the transfer attempt
     echo "ERROR: Rsync failed! Check logs for details."
 fi
+```
+Make the shell script excutable.
+```
+chmod 755 rsync_script.sh
 ```
 
 ## Test Connection
