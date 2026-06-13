@@ -16,9 +16,6 @@ graph TD
     A[Ubuntu Server: Source Data] -->|1. SSH Key Auth| B(SSH Tunnel on Port 8888)
     B --> C{Synology NAS (kurtwp)}
     C --> D[Destination Folder]
-    style A fill:#eef,stroke:#333,stroke-width:2px
-    style C fill:#ffe,stroke:#f99,stroke-width:2px
-
     subgraph Backup Process
         A -- rsync execution --> B
     end
