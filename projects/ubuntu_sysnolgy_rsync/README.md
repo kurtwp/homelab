@@ -114,7 +114,7 @@ ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 ```
 ## CRON Job
 ```bash
-0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /var/log/rsync_syno_cron.log 2>&1
+0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /home//call/log/rsync_syno_cron.log 2>&1
 ```
 
 |Position|Value|Description|Meaning|
@@ -127,13 +127,13 @@ ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 
 This segment tells the system how to run the rest of the command.
 
-**/bin/bash**: This explicitly calls the Bourne Again Shell. Using an explicit path like this is best practice in cron jobs because it guarantees that the correct interpreter will be used, regardless of the default environment variables.
+**/bin/bash**: This explicitly calls the Bourne Again Shell. Using an explicit path like this is best practice for cron jobs because it guarantees that the correct interpreter will be used, regardless of the default environment variables.
 
 **-c "..."**: The -c flag tells bash to read the string enclosed in quotes ("...") as a complete script or sequence of commands, and then execute them immediately.
 
 **"cd /home/call**" Where to find the script
 
-**&&**: xecute the command that follows only if the previous command succeeded.
+**&&**: Execute the command that follows only if the previous command succeeded.
 
 **/bin/bash /home/call/rsync_script.sh"**: It explicitly uses `/bin/bash` to execute the script, named `rsync_dasVault.sh`
 
