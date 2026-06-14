@@ -32,26 +32,26 @@ Before running the scripts, ensure the following are in place:
 Ensure that SSH and RSYNC are enabled on the DSM.
 
 2. Authentication Key Setup (On Ubuntu Server)
-   Need to generate ssh keys which will not requie the storage of a password to access the DSM
+   Need to generate ssh keys which will not require the storage of a password to access the DSM
 ```note
-Depending on the setup the Synology firewall might need an explicit rule allowing incoming traffic on Port xx for the IP address of your Ubuntu server (192.168.x.x).
+Depending on the setup, the Synology firewall might need an explicit rule allowing incoming traffic on Port xx for the IP address of your Ubuntu server (192.168.x.x).
 ```
 
 ## Generate SSH key pair
-On the Ubuntu server run the below command to create keys
+On the Ubuntu server, run the following command to create keys
 ```bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
 ```
 ## Copy Public Key to Synology NAS DSM
-On the Ubuntu server run the below command.  If using the standard SSH port of 22, no need to use `-p <port>`.
+On the Ubuntu server, run the command below.  If using the standard SSH port of 22, no need to use `-p <port>`.
 ```bash
 ssh-copy-id -p <port> <DSM Username>@<DSM IP Address>
 ssh-copy-id -p 8888 call@192.168.1.1
 
 NOTE: You will be prompted for your Synology password one last time.
 ```
-## Test Connetion
-On the Ubuntu server run the below command.  If using the standard SSH port of 22, no need to use `-p <port>`.
+## Test Connection
+On the Ubuntu server, run the command below.  If using the standard SSH port of 22, no need to use `-p <port>`.
 ```bash
 ssh -p <port> <DSM Username>@<DSM IP Address>
 ssh -p 8888 call@192.168.1.1
@@ -72,7 +72,7 @@ SOURCE_DIR="/path/to/your/directory/"      # Local directory on the Source Serve
 NAS_USER="DSM Username"                                          
 NAS_IP="DSM IP Address"                                       
 DEST_PATH="/path/to/where/it/should/go/"  # Target path on the destination server
-SSH_PORT=<port #>  # If using SSH standad port input 22
+SSH_PORT=<port #>  # If using SSH standard port, input 22
 
 # --- CRITICAL TARGET COMBINATION ---
 REMOTE_TARGET="${NAS_USER}@${NAS_IP}:${DEST_PATH}"
@@ -95,7 +95,7 @@ else
     echo "ERROR: Rsync failed! Check logs for details."
 fi
 ```
-Make the shell script excutable.
+Make the shell script executable.
 ```
 chmod 755 rsync_script.sh
 ```
