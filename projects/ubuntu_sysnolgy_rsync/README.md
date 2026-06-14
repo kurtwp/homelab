@@ -7,7 +7,7 @@
 </p>
 
 ## 📜 Overview
-This project goes over the scripts and configuration needed to establish a daily backup from a local Ubuntu server (26.04) as the source, to a Synology DS1522+ as the destination. The project uses `rsync` over an SSH tunnel on non standard port such as 8888 to ensure secure, incremental transfer of data.  The automation uses a bash script that is ran by a CRON JOB once a day.  
+This project goes over the scripts and configuration needed to establish a daily backup from a local Ubuntu server (26.04) as the source, to a Synology DS1522+ as the destination. The project uses `rsync` over an SSH tunnel on a non standard port, such as 8888, to ensure secure, incremental data transfer.  The automation uses a bash script that is run by a CRON JOB once a day.  
 
 ## ⚙️ Architecture Flow Diagram
 
@@ -120,14 +120,14 @@ ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 |Position|Value|Description|Meaning|
 | --- | --- | --- | --- |
 |Minute|0|The minutes past the hour (0–59).|At minute 0.|
-|Hour|3|The hour of the day (0–23).|At 3 o'clock AM.|
+|Hour|3|The hour of the day (0–23).|At 3 AM.|
 |Day of Month|*|The day of the month (1–31).|Every day.|
 |Month|*|The month (1–12).|Every month.|
 |Day of Week|*|"The day of the week (0–7, Sunday=0)."|Every day of the week.|
 
 This segment tells the system how to run the rest of the command.
 
-**/bin/bash**: This explicitly calls the Bourne Again Shell. Using an explicit path like this is best practice for cron jobs because it guarantees that the correct interpreter will be used, regardless of the default environment variables.
+**/bin/bash**: This explicitly calls the Bourne Again Shell. Using an explicit path like this is best practice for cron jobs because it ensures the correct interpreter is used, regardless of the default environment variables.
 
 **-c "..."**: The -c flag tells bash to read the string enclosed in quotes ("...") as a complete script or sequence of commands, and then execute them immediately.
 
@@ -137,6 +137,6 @@ This segment tells the system how to run the rest of the command.
 
 **/bin/bash /home/call/rsync_script.sh"**: It explicitly uses `/bin/bash` to execute the script, named `rsync_dasVault.sh`
 
-**>> /var/log/rsync_syno_cron.log**: The double angle bracket (>>) means append. All standard output (STDOUT) will be appended to this file. If the log file doesn't exist, it will be created.
+**>> /home/call/log/rsync_syno_cron.log**: The double angle bracket (>>) means append. All standard output (STDOUT) will be appended to this file. If the log file doesn't exist, it will be created.
 
 **2>&1**: This will ensure that both successful output and any errors are captured and logged into /var/log/rsync_syno_cron.log.
