@@ -112,3 +112,31 @@ rsync -azh --delete \
 
 ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 ```
+## CRON Job
+```bash
+0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /var/log/rsync_syno_cron.log 2>&1
+```
+
+|Position|Value|Description|Meaning|
+| --- | --- | --- | --- |
+|Minute|0|The minutes past the hour (0–59).|At minute 0.|
+|Hour|3|The hour of the day (0–23).|At 3 o'clock AM.|
+|Day of Month|*|The day of the month (1–31).|Every day.|
+|Month|*|The month (1–12).|Every month.|
+|Day of Week|*|"The day of the week (0–7, Sunday=0)."|Every day of the week.|
+
+This segment tells the system how to run the rest of the command.
+
+**/bin/bash**: This explicitly calls the Bourne Again Shell. Using an explicit path like this is best practice in cron jobs because it guarantees that the correct interpreter will be used, regardless of the default environment variables.
+
+**-c "..."**: The -c flag tells bash to read the string enclosed in quotes ("...") as a complete script or sequence of commands, and then execute them immediately.
+
+**"cd /home/call**" Where to find the script
+
+**&&**: xecute the command that follows only if the previous command succeeded.
+
+**/bin/bash /home/call/rsync_script.sh"**: It explicitly uses `/bin/bash` to execute the script, named `rsync_dasVault.sh`
+
+**>> /var/log/rsync_syno_cron.log**: The double angle bracket (>>) means append. All standard output (STDOUT) will be appended to this file. If the log file doesn't exist, it will be created.
+
+**2>&1**: This will ensure that both successful output and any errors are captured and logged into /var/log/rsync_syno_cron.log.
