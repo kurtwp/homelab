@@ -139,4 +139,4 @@ This segment tells the system how to run the rest of the command.
 
 **>> /home/call/log/rsync_syno_cron.log**: The double angle bracket (>>) means append. All standard output (STDOUT) will be appended to this file. If the log file doesn't exist, it will be created.
 
-**2>&1**: This will ensure that both successful output and any errors are captured and logged into /var/log/rsync_syno_cron.log.
+**2>&1**: This will ensure that both successful output and any errors are captured and logged into /home/call/log/rsync_syno_cron.log.
