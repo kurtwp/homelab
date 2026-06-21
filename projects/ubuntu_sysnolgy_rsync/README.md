@@ -85,8 +85,8 @@ echo "Attempting to sync from source to target: ${REMOTE_TARGET} via port ${SSH_
 rsync -azh --delete \
       "${SOURCE_DIR}" \
       "${REMOTE_TARGET}" \
-      -e "ssh -p ${SSH_PORT}" 
-
+      -e "ssh -p ${SSH_PORT}"
+# or  -e "ssh -p ${SSH_PORT} -O"
 if [ $? -eq 0 ]; then
     echo "--------------------------"
     echo "Sync completed successfully at $(date)"
