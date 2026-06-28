@@ -114,7 +114,7 @@ ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 ```
 ## CRON Job
 ```bash
-0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /home//call/log/rsync_syno_cron.log 2>&1
+0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /home/call/log/rsync_syno_cron.log 2>&1
 ```
 
 |Position|Value|Description|Meaning|
