@@ -116,6 +116,15 @@ ssh -p 8888 call@192.168.1.1 "echo Connection OK"
 ```bash
 0 3 * * * /bin/bash -c "cd /home/call && /bin/bash /home/call/rsync_script.sh" >> /home/call/log/rsync_syno_cron.log 2>&1
 ```
+## To Edit Cron
+```
+crontab -e
+```
+If you have not used `crontab -e ` before you might get a selection menu to select your default editor.  
+## To List Cron
+```
+crontab -l
+```  
 
 |Position|Value|Description|Meaning|
 | --- | --- | --- | --- |
